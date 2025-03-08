@@ -4,21 +4,25 @@
         text-align: center;
         position: relative;
     }
-    
-    .menu {
+
+    /* Oculta el menú en móviles hasta que se active */
+    nav ul {
         display: none;
-        position: absolute;
-        top: 60px;
-        right: 0;
+        flex-direction: column;
         background-color: black;
         width: 100%;
+        position: absolute;
+        top: 50px;
+        right: 0;
         text-align: center;
+        padding: 10px 0;
     }
-    
-    .menu.active {
-        display: block;
+
+    nav ul.active {
+        display: flex;
     }
-    
+
+    /* Estilo para el botón hamburguesa en móviles */
     .menu-toggle {
         display: block;
         position: absolute;
@@ -30,26 +34,42 @@
         font-size: 24px;
         cursor: pointer;
     }
-    
-    main {
+
+    /* Modificaciones para que los cuadros se muestren en forma de lista en pantallas pequeñas */
+    .content-grid {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
-    
-    .content-section {
-        width: 100%;
-        text-align: center;
+
+    .box {
+        width: auto;
+        margin-bottom: 20px;
     }
-    
+
+    /* Los botones de los cursos también en una lista vertical */
     .course-buttons {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    
-    .course-buttons button {
         width: 100%;
-        margin: 5px 0;
+    }
+
+    .course-buttons button {
+        margin: 10px 0;
+        width: 80%;
+    }
+}
+
+/* En pantallas grandes, el botón de hamburguesa no se muestra */
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
     }
 }
