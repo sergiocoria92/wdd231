@@ -58,7 +58,22 @@ function filterSelection(category) {
     const buttons = buttonsContainer.querySelectorAll("button");
 
     buttons.forEach(button => {
+        // Lógica para cursos completos (WDD 130 y WDD 131)
+        if (button.classList.contains('wdd') && (button.textContent === 'WDD 130' || button.textContent === 'WDD 131')) {
+            // Si es un curso completo, mantenemos el color naranja
+            button.style.backgroundColor = "orange";
+            button.style.color = "white";
+        } else {
+            // Si no es un curso completo, restablecemos el color original
+            button.style.backgroundColor = "";
+            button.style.color = "";
+        }
+
         // Mostrar solo los botones que coinciden con la categoría
-        button.style.display = (category === "all" || button.classList.contains(category)) ? "inline-block" : "none";
+        if (category === "all" || button.classList.contains(category)) {
+            button.style.display = "inline-block";
+        } else {
+            button.style.display = "none";
+        }
     });
 }
