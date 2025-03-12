@@ -1,0 +1,30 @@
+[
+  {
+    "name": "El taco loco",
+    "address": "1234 taco st",
+    "phone": "123-456-7890",
+    "hours": "9am-9pm",
+    "url": "http://www.eltacoloco.com"
+  },
+  {
+    "name": "Verduleria Lilis",
+    "address": "6783 veggie st",
+    "phone": "1102-456-7890",
+    "hours": "9am-9pm",
+    "url": "http://www.verduleria.com"
+  },
+  {
+    "name": "Fix car",
+    "address": "12 carrillo st",
+    "phone": "004-456-7890",
+    "hours": "9am-9pm",
+    "url": "http://www.carfix.com"
+  },
+  {
+    "name": "Car Wash",
+    "address": "center st",
+    "phone": "123-456-9990",
+    "hours": "9am-9pm",
+    "url": "http://www.carwash.com"
+  }
+]
