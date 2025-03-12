@@ -26,5 +26,33 @@
     "phone": "123-456-9990",
     "hours": "9am-9pm",
     "url": "http://www.carwash.com"
+  },
+  {
+    "name": "Taqueria el primo",
+    "address": "avenida luz 123",
+    "phone": "123-456-0000",
+    "hours": "2pm-9pm",
+    "url": "http://www.taqueriaelprimo.com"
+  },
+    {
+    "name": "Repara computadoras",
+    "address": "center universidad st",
+    "phone": "000-456-9990",
+    "hours": "9am-5pm",
+    "url": "http://ww2.reparacomputadoras.com"
+  },
+   {
+    "name": "Cruz roja",
+    "address": "cimatario 23",
+    "phone": "123-000-9990",
+    "hours": "24 hrs",
+    "url": "http://www.cruzroja.com"
+  },
+    {
+    "name": "Taxi seguro Raul",
+    "address": "cimatario 5236",
+    "phone": "123-000-0990",
+    "hours": "12am-3pm",
+    "url": "http://www.taxiraul.com"
   }
 ]
