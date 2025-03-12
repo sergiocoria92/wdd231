@@ -1,6 +1,7 @@
 [
   {
     "name": "El taco loco",
+    "business sector": "restaurant",
     "address": "1234 taco st",
     "phone": "123-456-7890",
     "hours": "9am-9pm",
@@ -8,6 +9,7 @@
   },
   {
     "name": "Verduleria Lilis",
+    "business sector": "grocery",
     "address": "6783 veggie st",
     "phone": "1102-456-7890",
     "hours": "9am-9pm",
@@ -15,6 +17,7 @@
   },
   {
     "name": "Fix car",
+    "business sector": "repair",
     "address": "12 carrillo st",
     "phone": "004-456-7890",
     "hours": "9am-9pm",
@@ -22,6 +25,7 @@
   },
   {
     "name": "Car Wash",
+    "business sector": "cleaning",
     "address": "center st",
     "phone": "123-456-9990",
     "hours": "9am-9pm",
@@ -29,6 +33,7 @@
   },
   {
     "name": "Taqueria el primo",
+    "business sector": "restaurant",
     "address": "avenida luz 123",
     "phone": "123-456-0000",
     "hours": "2pm-9pm",
@@ -36,6 +41,7 @@
   },
     {
     "name": "Repara computadoras",
+    "business sector": "repair",
     "address": "center universidad st",
     "phone": "000-456-9990",
     "hours": "9am-5pm",
@@ -43,6 +49,7 @@
   },
    {
     "name": "Cruz roja",
+    "business sector": "health",
     "address": "cimatario 23",
     "phone": "123-000-9990",
     "hours": "24 hrs",
@@ -50,9 +57,46 @@
   },
     {
     "name": "Taxi seguro Raul",
+    "business sector": "transport",
     "address": "cimatario 5236",
     "phone": "123-000-0990",
     "hours": "12am-3pm",
     "url": "http://www.taxiraul.com"
+  },
+
+  {
+    "name": "Doctor pedro",
+    "business sector": "health",
+    "address": "peñuelas 12",
+    "phone": "000-000-0990",
+    "hours": "8am-3pm",
+    "url": "http://www.doctorpedro.com"
+  },
+
+  {
+    "name": "Camiones Juan",
+    "business sector": "transport",
+    "address": "peñuelas 123a",
+    "phone": "000-1234-0990",
+    "hours": "8am-8pm",
+    "url": "http://www.camionesjuan.com"
+  },
+
+  {
+    "name": "gruas toques",
+    "business sector": "transport",
+    "address": "menchaca 123a",
+    "phone": "123-1234-0990",
+    "hours": "24 hrs",
+    "url": "http://www.gruastokes.com"
+  },
+  {
+    "name": "comida rica",
+    "business sector": "restaurant",
+    "address": "centro freu 12",
+    "phone": "123-1234-1290",
+    "hours": "24 hrs",
+    "url": "http://www.comidarica.com"
   }
+  
 ]
