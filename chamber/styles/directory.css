@@ -1,0 +1,68 @@
+/* Estilo básico para el cuerpo y encabezado */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Cuadrícula para las tarjetas de los profetas */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el número de columnas */
+    gap: 16px; /* Espacio entre las tarjetas */
+    padding: 20px;
+}
+
+/* Estilo para cada tarjeta de profeta */
+#cards section {
+    background-color: #f4f4f4;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo para las imágenes de los profetas */
+#cards img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo para el nombre de cada profeta */
+#cards h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Cambiar la visualización de la cuadrícula a una lista vertical en dispositivos móviles */
+    #cards {
+        display: block; /* Cambiar a bloque, lo que hará que los elementos se apilen */
+        padding: 10px;
+    }
+
+    /* Asegurarnos de que cada tarjeta se apile verticalmente */
+    #cards section {
+        margin-bottom: 20px; /* Espacio entre las tarjetas */
+        width: 100%; /* Asegurarse de que las tarjetas ocupen todo el ancho disponible */
+    }
+
+    /* Opcional: Hacer que las imágenes sean más pequeñas para dispositivos móviles */
+    #cards img {
+        width: 80%; /* Reducir el tamaño de la imagen en móviles */
+        margin: 0 auto; /* Centrar las imágenes */
+        display: block;
+    }
+}
