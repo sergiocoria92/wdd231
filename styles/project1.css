@@ -86,3 +86,31 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
+
+
+footer {
+    display: flex;
+    justify-content: space-between; /* Distribuye el contenido horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
+}
+
+footer p {
+    margin: 0 20px; /* Espaciado entre los elementos */
+}
+
+footer a {
+    color: white; /* Color de los íconos */
+    text-decoration: none;
+}
+
+footer i {
+    transition: transform 0.3s; /* Agrega una animación sutil */
+}
+
+footer i:hover {
+    transform: scale(1.2); /* Efecto al pasar el mouse */
+}

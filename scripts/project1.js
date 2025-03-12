@@ -43,11 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Actualiza la fecha de última modificación
-    const lastModifiedElement = document.querySelector("#last-modified");
-    if (lastModifiedElement) {
-        lastModifiedElement.textContent = "Last Modified: " + document.lastModified;
-    }
+// Actualiza la fecha de última modificación
+const lastModifiedElement = document.querySelector("#last-modified");
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
+}
 
     // Llamamos a la función para aplicar los colores en los botones de cursos completos al cargar la página
     highlightCompletedCourses();
