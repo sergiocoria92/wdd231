@@ -16,7 +16,7 @@
     "phone": "1102-456-7890",
     "hours": "9am-9pm",
     "url": "http://www.verduleria.com",
-    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/lilis.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/lilis.jpeg",
     "membership level": "3-gold"
   },
   {
@@ -46,7 +46,7 @@
     "phone": "123-456-0000",
     "hours": "2pm-9pm",
     "url": "http://www.taqueriaelprimo.com",
-    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/tacos_primo.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/tacos_primo.jpeg",
     "membership level": "1-member"
   },
     {
@@ -56,7 +56,7 @@
     "phone": "000-456-9990",
     "hours": "9am-5pm",
     "url": "http://ww2.reparacomputadoras.com",
-    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/rapara_pc.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/repara_pc.jpg",
     "membership level": "2-silver"
   },
    {
@@ -66,7 +66,7 @@
     "phone": "123-000-9990",
     "hours": "24 hrs",
     "url": "http://www.cruzroja.com",
-    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/cruz_roja.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/cruz_roja.png",
     "membership level": "2-silver"
   },
     {
