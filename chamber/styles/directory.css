@@ -7,11 +7,43 @@ body {
 
 header {
     background-color: #333;
-    color: #fff;
+    color: #fff; 
     padding: 1em;
     text-align: center;
 }
+/*navegador */
 
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hace que los elementos de la lista estén en línea */
+    justify-content: center; /* Centra los elementos en el nav */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaciado entre los elementos */
+}
+
+nav ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Color cuando pasas el mouse */
+}
+/*fin de nav */
 /* Cuadrícula para las tarjetas de los profetas */
 #cards {
     display: grid;
