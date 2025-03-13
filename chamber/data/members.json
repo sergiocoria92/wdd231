@@ -5,7 +5,9 @@
     "address": "1234 taco st",
     "phone": "123-456-7890",
     "hours": "9am-9pm",
-    "url": "http://www.eltacoloco.com"
+    "url": "http://www.eltacoloco.com",
+    "image": "http://www.taxiraul.com/image.jpg",
+    "membership level": "2-silver"
   },
   {
     "name": "Verduleria Lilis",
@@ -13,7 +15,9 @@
     "address": "6783 veggie st",
     "phone": "1102-456-7890",
     "hours": "9am-9pm",
-    "url": "http://www.verduleria.com"
+    "url": "http://www.verduleria.com",
+    "image": "http://www.taxiraul.com/image.jpg",
+    "membership level": "3-gold"
   },
   {
     "name": "Fix car",
@@ -21,7 +25,9 @@
     "address": "12 carrillo st",
     "phone": "004-456-7890",
     "hours": "9am-9pm",
-    "url": "http://www.carfix.com"
+    "url": "http://www.carfix.com",
+    "image": "http://www.taxiraul.com/image.jpg",
+    "membership level": "1-member"
   },
   {
     "name": "Car Wash",
@@ -29,7 +35,9 @@
     "address": "center st",
     "phone": "123-456-9990",
     "hours": "9am-9pm",
-    "url": "http://www.carwash.com"
+    "url": "http://www.carwash.com",
+    "image": "http://www.taxiraul.com/image.jpg",
+    "membership level": "3-gold"
   },
   {
     "name": "Taqueria el primo",
@@ -37,7 +45,9 @@
     "address": "avenida luz 123",
     "phone": "123-456-0000",
     "hours": "2pm-9pm",
-    "url": "http://www.taqueriaelprimo.com"
+    "url": "http://www.taqueriaelprimo.com",
+    "image": "http://www.taxiraul.com/image.jpg",
+    "membership level": "1-member"
   },
     {
     "name": "Repara computadoras",
@@ -45,7 +55,9 @@
     "address": "center universidad st",
     "phone": "000-456-9990",
     "hours": "9am-5pm",
-    "url": "http://ww2.reparacomputadoras.com"
+    "url": "http://ww2.reparacomputadoras.com",
+    "image": "http://www.taxiraul.com/image.jpg",
+    "membership level": "2-silver"
   },
    {
     "name": "Cruz roja",
@@ -53,7 +65,9 @@
     "address": "cimatario 23",
     "phone": "123-000-9990",
     "hours": "24 hrs",
-    "url": "http://www.cruzroja.com"
+    "url": "http://www.cruzroja.com",
+    "image": "http://www.taxiraul.com/image.jpg",
+    "membership level": "2-silver"
   },
     {
     "name": "Taxi seguro Raul",
@@ -94,7 +108,9 @@
     "address": "menchaca 123a",
     "phone": "123-1234-0990",
     "hours": "24 hrs",
-    "url": "http://www.gruastokes.com"
+    "url": "http://www.gruastokes.com",
+    "image": "http://www.taxiraul.com/image.jpg",
+    "membership level": "1-member"
   },
   {
     "name": "comida rica",
@@ -102,7 +118,9 @@
     "address": "centro freu 12",
     "phone": "123-1234-1290",
     "hours": "24 hrs",
-    "url": "http://www.comidarica.com"
+    "url": "http://www.comidarica.com",
+    "image": "http://www.taxiraul.com/image.jpg",
+    "membership level": "1-member"
   }
   
 ]

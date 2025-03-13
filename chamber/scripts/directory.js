@@ -7,8 +7,6 @@ if (lastModifiedElement) {
 
 
 
-
-
 const cards = document.querySelector('#cards');
 
 const url = "https://sergiocoria92.github.io/wdd231/data/members.json";
@@ -36,6 +34,9 @@ const displayBusinesses = (directory) => {
         let phone = document.createElement('p');
         let hours = document.createElement('p');
         let urlLink = document.createElement('a');
+        let image = document.createElement('img');
+        let businessSector = document.createElement('p');
+        let membershipLevel = document.createElement('p');
 
         // Asignar valores del JSON
         fullName.textContent = business.name;
@@ -45,12 +46,22 @@ const displayBusinesses = (directory) => {
         urlLink.href = business.url;
         urlLink.textContent = "Visit Website";
         urlLink.target = "_blank"; // Abrir en una nueva pestaña
+        businessSector.textContent = `Sector: ${business["business sector"]}`;
+        membershipLevel.textContent = `Membership Level: ${business["membership level"]}`;
+
+        // Configurar la imagen
+        image.src = business.image;
+        image.alt = `${business.name} logo`;
+        image.style.width = "100px"; // Ajusta el tamaño si es necesario
 
         // Agregar elementos a la card
         card.appendChild(fullName);
+        card.appendChild(image);
         card.appendChild(address);
         card.appendChild(phone);
         card.appendChild(hours);
+        card.appendChild(businessSector);
+        card.appendChild(membershipLevel);
         card.appendChild(urlLink);
 
         // Agregar la card al contenedor
