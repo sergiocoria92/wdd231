@@ -9,7 +9,7 @@ if (lastModifiedElement) {
 
 const cards = document.querySelector('#cards');
 
-const url = "https://sergiocoria92.github.io/wdd231/data/members.json";
+const url = "https://sergiocoria92.github.io/wdd231/chamber/data/members.json";
 
 async function getBusinessData() {
     try {
