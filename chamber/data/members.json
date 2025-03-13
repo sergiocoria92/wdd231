@@ -6,7 +6,7 @@
     "phone": "123-456-7890",
     "hours": "9am-9pm",
     "url": "http://www.eltacoloco.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/el_taco_loco.jpg",
     "membership level": "2-silver"
   },
   {
@@ -16,17 +16,17 @@
     "phone": "1102-456-7890",
     "hours": "9am-9pm",
     "url": "http://www.verduleria.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/lilis.jpg",
     "membership level": "3-gold"
   },
   {
-    "name": "Fix car",
+    "name": "Car fix",
     "business sector": "repair",
     "address": "12 carrillo st",
     "phone": "004-456-7890",
     "hours": "9am-9pm",
     "url": "http://www.carfix.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/car_fix.jpg",
     "membership level": "1-member"
   },
   {
@@ -36,7 +36,7 @@
     "phone": "123-456-9990",
     "hours": "9am-9pm",
     "url": "http://www.carwash.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/car_wash.jpg",
     "membership level": "3-gold"
   },
   {
@@ -46,7 +46,7 @@
     "phone": "123-456-0000",
     "hours": "2pm-9pm",
     "url": "http://www.taqueriaelprimo.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/tacos_primo.jpg",
     "membership level": "1-member"
   },
     {
@@ -56,7 +56,7 @@
     "phone": "000-456-9990",
     "hours": "9am-5pm",
     "url": "http://ww2.reparacomputadoras.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/rapara_pc.jpg",
     "membership level": "2-silver"
   },
    {
@@ -66,7 +66,7 @@
     "phone": "123-000-9990",
     "hours": "24 hrs",
     "url": "http://www.cruzroja.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/cruz_roja.jpg",
     "membership level": "2-silver"
   },
     {
@@ -76,7 +76,7 @@
     "phone": "123-000-0990",
     "hours": "12am-3pm",
     "url": "http://www.taxiraul.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image":"https://sergiocoria92.github.io/wdd231/chamber/images/tazi_seguro.png",
     "membership level": "2-silver"
   },
 
@@ -87,7 +87,7 @@
     "phone": "000-000-0990",
     "hours": "8am-3pm",
     "url": "http://www.doctorpedro.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/dr_pedro.jpg",
     "membership level": "1-member"
   },
 
@@ -98,7 +98,7 @@
     "phone": "000-1234-0990",
     "hours": "8am-8pm",
     "url": "http://www.camionesjuan.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/don_juan_transporte.jpeg",
     "membership level": "3-gold"
   },
 
@@ -109,7 +109,7 @@
     "phone": "123-1234-0990",
     "hours": "24 hrs",
     "url": "http://www.gruastokes.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/toques_gruas.jpeg",
     "membership level": "1-member"
   },
   {
@@ -119,7 +119,7 @@
     "phone": "123-1234-1290",
     "hours": "24 hrs",
     "url": "http://www.comidarica.com",
-    "image": "http://www.taxiraul.com/image.jpg",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/comida_rica.jpg",
     "membership level": "1-member"
   }
   
