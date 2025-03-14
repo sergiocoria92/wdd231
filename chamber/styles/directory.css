@@ -44,6 +44,25 @@ nav ul li a:hover {
     color: #ffcc00; /* Color cuando pasas el mouse */
 }
 /*fin de nav */
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    color: black
+    
+}
+
+main.p {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    text-align: center;
+}
+
+
 /* Cuadrícula para las tarjetas de los profetas */
 #cards {
     display: grid;
