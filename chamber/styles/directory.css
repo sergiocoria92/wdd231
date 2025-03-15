@@ -119,26 +119,7 @@ footer i:hover {
     transform: scale(1.2);
 }
 
-/* Corrección de propiedades en Font Awesome */
-.fa-beat,
-.fa-beat-fade,
-.fa-fade,
-.fa-flip,
-.fa-spin {
-    animation-delay: var(--fa-animation-delay, 0s); /* Agregamos unidad de tiempo */
-}
 
-.fa-flip-horizontal {
-    transform: scaleX(-1); /* No se requiere unidad */
-}
-
-.fa-flip-vertical {
-    transform: scaleY(-1); /* No se requiere unidad */
-}
-
-.fa-rotate-by {
-    transform: rotate(var(--fa-rotate-angle, 0deg)); /* Agregamos una unidad válida */
-}
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
