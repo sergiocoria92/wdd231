@@ -54,7 +54,7 @@ h1 {
 
 /* Corrección del selector (antes era main.p) */
 main p {
-    padding: 20px;
+
     text-align: center;
     font-size: 1.2em;
     color: #555;
@@ -88,7 +88,7 @@ main p {
 #cards h2 {
     font-size: 1.5em;
     color: #333;
-    margin: 10px 0;
+
 }
 
 /* Pie de página */
