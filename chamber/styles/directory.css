@@ -133,7 +133,7 @@ footer i:hover {
 }
 
 .fa-flip-vertical {
-    transform: scaleY(-1);
+    transform: scaleY(-1); /* No se requiere unidad */
 }
 
 .fa-rotate-by {
@@ -178,11 +178,9 @@ footer i:hover {
     }
 }
 
-
-    footer .footer-socials {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-    
-
+footer .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
+
