@@ -157,4 +157,32 @@ footer i:hover {
         margin: 0 auto;
         display: block;
     }
+    footer p {
+        display: block;
+        margin: 10px 0;
+    }
+
+    footer .fab {
+        margin: 0 15px;
+    }
+
+    footer .footer-socials {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    footer .footer-socials a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+    footer .footer-socials {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    
+
 }
