@@ -54,7 +54,6 @@ h1 {
 
 /* Corrección del selector (antes era main.p) */
 main p {
-
     text-align: center;
     font-size: 1.2em;
     color: #555;
@@ -88,7 +87,6 @@ main p {
 #cards h2 {
     font-size: 1.5em;
     color: #333;
-
 }
 
 /* Pie de página */
@@ -119,8 +117,6 @@ footer i:hover {
     transform: scale(1.2);
 }
 
-
-
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     #cards {
@@ -138,6 +134,7 @@ footer i:hover {
         margin: 0 auto;
         display: block;
     }
+
     footer p {
         display: block;
         margin: 10px 0;
@@ -164,4 +161,3 @@ footer .footer-socials {
     justify-content: center;
     gap: 15px;
 }
-
