@@ -11,9 +11,8 @@ header {
     padding: 1em;
     text-align: center;
 }
-/*navegador */
 
-
+/* Navegador */
 nav {
     background-color: #333;
     padding: 10px 0;
@@ -23,17 +22,17 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Hace que los elementos de la lista estén en línea */
-    justify-content: center; /* Centra los elementos en el nav */
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px; /* Espaciado entre los elementos */
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white; /* Color del texto */
-    text-decoration: none; /* Quita el subrayado */
+    color: white;
+    text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     padding: 10px 15px;
@@ -41,37 +40,35 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Color cuando pasas el mouse */
+    color: #ffcc00;
 }
-/*fin de nav */
 
+/* Títulos */
 h1 {
     font-size: 2.5em;
     margin: 0;
     padding: 20px 0;
     text-align: center;
-    color: black
-    
+    color: black;
 }
 
-main.p {
+/* Corrección del selector (antes era main.p) */
+main p {
     padding: 20px;
     text-align: center;
     font-size: 1.2em;
     color: #555;
-    text-align: center;
 }
 
-
-/* Cuadrícula para las tarjetas de los profetas */
+/* Cuadrícula para las tarjetas */
 #cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el número de columnas */
-    gap: 16px; /* Espacio entre las tarjetas */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
     padding: 20px;
 }
 
-/* Estilo para cada tarjeta de profeta */
+/* Estilo para cada tarjeta */
 #cards section {
     background-color: #f4f4f4;
     padding: 16px;
@@ -80,66 +77,84 @@ main.p {
     text-align: center;
 }
 
-/* Estilo para las imágenes de los profetas */
+/* Estilo para las imágenes */
 #cards img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Estilo para el nombre de cada profeta */
+/* Estilo para los nombres */
 #cards h2 {
     font-size: 1.5em;
     color: #333;
     margin: 10px 0;
 }
 
+/* Pie de página */
 footer {
     display: flex;
-    justify-content: space-between; /* Distribuye el contenido horizontalmente */
-    align-items: center; /* Alinea verticalmente */
-    background-color: #333; /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 20px; /* Espaciado interno */
-    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 footer p {
-    margin: 0 20px; /* Espaciado entre los elementos */
+    margin: 0 20px;
 }
 
 footer a {
-    color: white; /* Color de los íconos */
+    color: white;
     text-decoration: none;
 }
 
 footer i {
-    transition: transform 0.3s; /* Agrega una animación sutil */
+    transition: transform 0.3s;
 }
 
 footer i:hover {
-    transform: scale(1.2); /* Efecto al pasar el mouse */
+    transform: scale(1.2);
 }
 
+/* Corrección de propiedades en Font Awesome */
+.fa-beat,
+.fa-beat-fade,
+.fa-fade,
+.fa-flip,
+.fa-spin {
+    animation-delay: var(--fa-animation-delay, 0s); /* Agregamos unidad de tiempo */
+}
+
+.fa-flip-horizontal {
+    transform: scaleX(-1); /* No se requiere unidad */
+}
+
+.fa-flip-vertical {
+    transform: scaleY(-1);
+}
+
+.fa-rotate-by {
+    transform: rotate(var(--fa-rotate-angle, 0deg)); /* Agregamos una unidad válida */
+}
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-    /* Cambiar la visualización de la cuadrícula a una lista vertical en dispositivos móviles */
     #cards {
-        display: block; /* Cambiar a bloque, lo que hará que los elementos se apilen */
+        display: block;
         padding: 10px;
     }
 
-    /* Asegurarnos de que cada tarjeta se apile verticalmente */
     #cards section {
-        margin-bottom: 20px; /* Espacio entre las tarjetas */
-        width: 100%; /* Asegurarse de que las tarjetas ocupen todo el ancho disponible */
+        margin-bottom: 20px;
+        width: 100%;
     }
 
-    /* Opcional: Hacer que las imágenes sean más pequeñas para dispositivos móviles */
     #cards img {
-        width: 80%; /* Reducir el tamaño de la imagen en móviles */
-        margin: 0 auto; /* Centrar las imágenes */
+        width: 80%;
+        margin: 0 auto;
         display: block;
     }
 }
