@@ -4,28 +4,36 @@ if (lastModifiedElement) {
     lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
 }
 
-
-
-
 const cards = document.querySelector('#cards');
-
 const url = "https://sergiocoria92.github.io/wdd231/chamber/data/members.json";
 
+// Verifica que el contenedor #cards exista
+if (!cards) {
+    console.error("No se encontró el contenedor #cards en el HTML.");
+}
+
+// Obtiene los datos del JSON
 async function getBusinessData() {
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         const data = await response.json();
+        
         console.table(data);
+        
+        // Verifica que la data es un array antes de usar forEach
+        if (!Array.isArray(data)) {
+            throw new Error("El formato de datos no es un array.");
+        }
+
         displayBusinesses(data);
     } catch (error) {
         console.error("Error fetching data:", error);
     }
 }
 
-getBusinessData();
-
-const displayBusinesses = (directory) => {
+// Muestra los negocios en tarjetas
+function displayBusinesses(directory) {
     directory.forEach((business) => {
         // Crear elementos
         let card = document.createElement('section');
@@ -38,20 +46,28 @@ const displayBusinesses = (directory) => {
         let businessSector = document.createElement('p');
         let membershipLevel = document.createElement('p');
 
-        // Asignar valores del JSON
-        fullName.textContent = business.name;
-        address.textContent = `Address: ${business.address}`;
-        phone.textContent = `Phone: ${business.phone}`;
-        hours.textContent = `Hours: ${business.hours}`;
-        urlLink.href = business.url;
-        urlLink.textContent = "Visit Website";
-        urlLink.target = "_blank"; // Abrir en una nueva pestaña
-        businessSector.textContent = `Sector: ${business["business sector"]}`;
-        membershipLevel.textContent = `Membership Level: ${business["membership level"]}`;
+        // Asignar valores del JSON con validaciones
+        fullName.textContent = business.name || "Nombre no disponible";
+        address.textContent = `Address: ${business.address || "No disponible"}`;
+        phone.textContent = `Phone: ${business.phone || "No disponible"}`;
+        hours.textContent = `Hours: ${business.hours || "No disponible"}`;
+        
+        // Configurar el enlace
+        if (business.url) {
+            urlLink.href = business.url;
+            urlLink.textContent = "Visit Website";
+            urlLink.target = "_blank"; // Abrir en una nueva pestaña
+        } else {
+            urlLink.textContent = "No disponible";
+            urlLink.style.color = "gray"; // Opcional, para indicar que no hay enlace
+        }
 
-        // Configurar la imagen
-        image.src = business.image;
-        image.alt = `${business.name} logo`;
+        businessSector.textContent = `Sector: ${business["business sector"] || "No disponible"}`;
+        membershipLevel.textContent = `Membership Level: ${business["membership level"] || "No disponible"}`;
+
+        // Configurar la imagen con valor por defecto
+        image.src = business.image || "default-image.jpg";
+        image.alt = `${business.name || "Negocio"} logo`;
         image.style.width = "100px"; // Ajusta el tamaño si es necesario
 
         // Agregar elementos a la card
@@ -64,7 +80,12 @@ const displayBusinesses = (directory) => {
         card.appendChild(membershipLevel);
         card.appendChild(urlLink);
 
-        // Agregar la card al contenedor
-        cards.appendChild(card);
+        // Agregar la card al contenedor si existe
+        if (cards) {
+            cards.appendChild(card);
+        }
     });
-};
+}
+
+// Llama a la función para obtener los datos
+getBusinessData();
