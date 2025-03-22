@@ -190,6 +190,23 @@ footer i:hover {
     transform: scale(1.2);
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+
 
 
 /* Responsive */
