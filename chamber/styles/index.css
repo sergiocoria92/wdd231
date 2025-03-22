@@ -190,14 +190,7 @@ footer i:hover {
     transform: scale(1.2);
 }
 
-/* Iconos FontAwesome */
-.fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
-    text-rendering: optimizeLegibility;
-}
 
-.fa-rotate-by {
-    transform: rotate(var(--fa-rotate-angle, 0deg));
-}
 
 /* Responsive */
 @media (max-width: 768px) {
