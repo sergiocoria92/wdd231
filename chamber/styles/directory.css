@@ -91,6 +91,56 @@ main p {
     color: #333;
 }
 
+
+/* Estilo por defecto (cuadrícula) */
+#cards.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+/* Estilo para vista lista *//* Estilo para vista lista */
+#cards.list-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cards.list-view section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#cards.list-view img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para botones */
+.view-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.view-toggle button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.view-toggle button:hover {
+    background-color: #ffcc00;
+}
+
+
+
+
 /* Pie de página */
 footer {
     display: flex;
@@ -162,4 +212,64 @@ footer .footer-socials {
     display: flex;
     justify-content: center;
     gap: 15px;
+}
+
+/* Ocultar menú hamburguesa en pantallas grandes */
+.menu-toggle {
+    display: none;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        margin: 10px;
+    }
+
+    .menu-toggle .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 60px;
+        left: -100%; /* Oculto por defecto */
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        text-align: center;
+        transition: 0.3s ease;
+    }
+
+    .nav-list.active {
+        left: 0; /* Mostrar menú */
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+    }
+}
+
+/*Estilos para pantallas grandes */
+@media (min-width: 769px) {
+    .nav-list {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: none;
+        left: 0 !important; /* Asegura que el menú esté visible */
+    }
+
+    .menu-toggle {
+        display: none;
+    }
 }

@@ -1,3 +1,25 @@
+// Selecciona los botones y el contenedor
+const gridViewButton = document.querySelector("#grid-view");
+const listViewButton = document.querySelector("#list-view");
+const cardsContainer = document.querySelector("#cards");
+
+// Establece la vista en cuadrícula por defecto
+cardsContainer.classList.add("grid-view");
+
+// Cambia a vista cuadrícula
+gridViewButton.addEventListener("click", () => {
+    cardsContainer.classList.remove("list-view");
+    cardsContainer.classList.add("grid-view");
+});
+
+// Cambia a vista lista
+listViewButton.addEventListener("click", () => {
+    cardsContainer.classList.remove("grid-view");
+    cardsContainer.classList.add("list-view");
+});
+
+
+
 // Actualiza la fecha de última modificación
 const lastModifiedElement = document.querySelector("#last-modified");
 if (lastModifiedElement) {
@@ -89,3 +111,12 @@ function displayBusinesses(directory) {
 
 // Llama a la función para obtener los datos
 getBusinessData();
+
+
+const mobileMenu = document.getElementById("mobile-menu");
+const navList = document.querySelector(".nav-list");
+
+// Alternar menú hamburguesa al hacer clic
+mobileMenu.addEventListener("click", () => {
+    navList.classList.toggle("active");
+});
