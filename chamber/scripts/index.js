@@ -34,11 +34,11 @@ async function getBusinessData() {
         console.error("Error fetching data:", error);
     }
 }
-
-// Muestra solo los negocios con '3-gold'
+// Muestra solo 3 negocios aleatorios con '3-gold'
 function displayGoldMembers(directory) {
     const title = document.createElement('h2');
     title.textContent = "Featured Users";
+    cardsContainer.innerHTML = ""; // Limpia el contenedor antes de añadir nuevos elementos
     cardsContainer.appendChild(title);
 
     const goldMembers = directory.filter(business => business["membership level"] === "3-gold");
@@ -48,7 +48,13 @@ function displayGoldMembers(directory) {
         return;
     }
 
-    goldMembers.forEach(business => {
+    // Mezcla el array aleatoriamente
+    const shuffledMembers = goldMembers.sort(() => 0.5 - Math.random());
+
+    // Toma solo los primeros 3 miembros
+    const selectedMembers = shuffledMembers.slice(0, 3);
+
+    selectedMembers.forEach(business => {
         let card = document.createElement('section');
         card.classList.add("card");
 
@@ -78,12 +84,3 @@ function displayGoldMembers(directory) {
         cardsContainer.appendChild(card);
     });
 }
-
-// Llama a la función para obtener los datos
-getBusinessData();
-
-
-// Menú móvil
-const mobileMenu = document.getElementById("mobile-menu");
-const navList = document.querySelector(".nav-list");
-mobileMenu.addEventListener("click", () => navList.classList.toggle("active"));
