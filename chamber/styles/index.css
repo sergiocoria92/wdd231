@@ -270,14 +270,13 @@ footer i:hover {
 }
 
 
-
-/* Mejorar renderizado de texto */
 .fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Corregir rotación */
+
 .fa-rotate-by {
-    transform: rotate(var(--fa-rotate-angle, 0deg));
+    transform: rotate(var(--fa-rotate-angle, 0deg)); /* Valor por defecto: 0deg */
 }
