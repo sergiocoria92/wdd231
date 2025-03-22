@@ -268,3 +268,14 @@ footer i:hover {
         display: flex;
     }
 }
+
+
+/* Sobrescribir text-rendering */
+.fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
+    text-rendering: optimizeLegibility;
+}
+
+/* Sobrescribir transform para rotación */
+.fa-rotate-by {
+    transform: rotate(var(--fa-rotate-angle, 0deg));
+}
