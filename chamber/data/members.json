@@ -110,7 +110,7 @@
     "hours": "24 hrs",
     "url": "http://www.gruastokes.com",
     "image": "https://sergiocoria92.github.io/wdd231/chamber/images/toques_gruas.jpeg",
-    "membership level": "1-member"
+    "membership level": "3-gold"
   },
   {
     "name": "comida rica",
@@ -120,7 +120,17 @@
     "hours": "24 hrs",
     "url": "http://www.comidarica.com",
     "image": "https://sergiocoria92.github.io/wdd231/chamber/images/comida_rica.jpg",
-    "membership level": "1-member"
+    "membership level": "3-gold"
+  },
+  {
+    "name": "kinder garden la esperanza",
+    "business sector": "services",
+    "address": "del sol 12",
+    "phone": "123-1212-1290",
+    "hours": "9am - 2:00pm",
+    "url": "http://www.laesperanzakinder.com",
+    "image": "https://sergiocoria92.github.io/wdd231/chamber/images/la_esperanza.jpg",
+    "membership level": "3-gold"
   }
   
 ]
