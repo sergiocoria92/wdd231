@@ -20,7 +20,7 @@
     
         <!-- Linking to CSS stylesheets -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="styles/directory.css">
+        <link rel="stylesheet" href="styles/index.css">
 
     </head>
     
@@ -44,18 +44,43 @@
             
         </header>
         <main>
-            <h1>Chamber Directory</h1>
-            <p>Welcome to the Chamber Directory! Here you can find information about local businesses and organizations.</p>
-            
-            <!-- Botones para alternar vista -->
-            <div class="view-toggle">
-                <button id="grid-view">Grid</button>
-                <button id="list-view">List</button>
+            <div class="image-container">
+                <img src="images/queretaro.avif" alt="Chamber of Commerce Querétaro" class="chamber-image">
             </div>
-            
-            
-            <div id="cards" class="grid-view"></div> <!-- Por defecto en vista cuadrícula -->
+            <h1>Chamber of Querétaro - México</h1>
+            <p>Welcome to Chamber Home Page</p>
+            <div class="grid-container">
+                <!-- Events -->
+                <div class="grid-item">
+                    <h3>Events</h3>
+                </div>
+                <!-- Current Weather -->
+                <div class="grid-item">
+                    <h3>Current Weather</h3>
+                </div>
+                <!-- Weather Forecast -->
+                <div class="grid-item">
+                    <h3>Weather Forecast</h3>
+                </div>
+        
+                <!-- Events Content -->
+                <div class="grid-item">
+                    <p>Concert in the center - Molotov - Thursday 8:00 pm</p>
+                </div>
+                <!-- Current Weather Content -->
+                <div class="grid-item">
+                    <div id="current-weather">Loading current weather...</div>
+                    <a href="images/weather.png" target="_blank">
+                        <img src="images/weather.png" alt="Weather Icon" class="weather-icon">
+                    </a>
+                </div>
+                <!-- Weather Forecast Content -->
+                <div class="grid-item">
+                    <p id="weather-forecast">Loading forecast...</p>
+                </div>
+            </div>
         </main>
+        
         
         <footer>
             <p>Camara de comercio Querétaro, Qro. México
@@ -83,7 +108,7 @@
         </footer>
 
         <!-- Link to your JavaScript file -->
-        <script defer src="scripts/directory.js"></script>
+        <script defer src="scripts/index.js"></script>
     </body>
 </html>
 
