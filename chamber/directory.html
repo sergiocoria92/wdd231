@@ -27,20 +27,36 @@
     <body>
         <header>
             <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../chamber/directory.html">Chamber</a></li>
-                    <li><a href="https://github.com/sergiocoria92">GitHub Profile</a></li>
-                    <li><a href="https://www.linkedin.com/in/sergiocoriamaya/?locale=en_US">LinkedIn</a></li>
-                </ul>
+                <div class="menu-container">
+                    <div class="menu-toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../chamber/directory.html">Chamber</a></li>
+                        <li><a href="https://github.com/sergiocoria92">GitHub Profile</a></li>
+                        <li><a href="https://www.linkedin.com/in/sergiocoriamaya/?locale=en_US">LinkedIn</a></li>
+                   </ul>
+                </div>
             </nav>
+            
         </header>
         <main>
             <h1>Chamber Directory</h1>
             <p>Welcome to the Chamber Directory! Here you can find information about local businesses and organizations.</p>
-            <div id="cards"></div>
+            
+            <!-- Botones para alternar vista -->
+            <div class="view-toggle">
+                <button id="grid-view">Grid</button>
+                <button id="list-view">List</button>
+            </div>
+            
+            
+            <div id="cards" class="grid-view"></div> <!-- Por defecto en vista cuadrícula -->
         </main>
-
+        
         <footer>
             <p>Camara de comercio Querétaro, Qro. México
                 <br>Ciudad del Sol 116 C.P. 70000
@@ -70,3 +86,4 @@
         <script defer src="scripts/directory.js"></script>
     </body>
 </html>
+
