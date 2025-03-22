@@ -210,6 +210,7 @@ footer i:hover {
 
 
 /* Responsive */
+/* Responsive */
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;
@@ -226,13 +227,7 @@ footer i:hover {
     footer p {
         display: block;
     }
-}
 
-.menu-toggle {
-    display: none;
-}
-
-@media (max-width: 768px) {
     .menu-toggle {
         display: flex;
         flex-direction: column;
@@ -263,9 +258,4 @@ footer i:hover {
     }
 }
 
-@media (min-width: 769px) {
-    .nav-list {
-        display: flex;
-    }
-}
 
