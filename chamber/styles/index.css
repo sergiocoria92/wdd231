@@ -12,7 +12,7 @@ header {
     color: #fff; 
     padding: 1em;
     text-align: center;
-    display: flex; /* Ensure header is a flex container */
+    display: flex; /* Flex container */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
 }
@@ -62,17 +62,17 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Ajusta según sea necesario */
+    height: 100%;
 }
 
-/* Opcional: Estilizar la imagen */
 .chamber-image {
-    max-width: 100%; /* Ajusta el tamaño según el contenedor */
+    max-width: 100%; 
     height: auto;
-    border-radius: 8px; /* Opcional: bordes redondeados */
+    border-radius: 8px;
 }
 
-/*clima*/.grid-container {
+/* Clima */
+.grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
@@ -91,18 +91,14 @@ h1 {
     margin-top: 10px;
 }
 
-
-/* Corrección del selector (antes era main.p) */
+/* Texto centralizado */
 main p {
     text-align: center;
     font-size: 1.2em;
     color: #555;
 }
 
-
-
-
-/* Cuadrícula para las tarjetas */
+/* Tarjetas */
 #cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -110,7 +106,6 @@ main p {
     padding: 20px;
 }
 
-/* Estilo para cada tarjeta */
 #cards section {
     background-color: #f4f4f4;
     padding: 16px;
@@ -119,28 +114,24 @@ main p {
     text-align: center;
 }
 
-/* Estilo para las imágenes */
 #cards img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Estilo para los nombres */
 #cards h2 {
     font-size: 1.5em;
     color: #333;
 }
 
-
-/* Estilo por defecto (cuadrícula) */
+/* Vista cuadrícula */
 #cards.grid-view {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 16px;
 }
 
-/* Estilo para vista lista *//* Estilo para vista lista */
+/* Vista lista */
 #cards.list-view {
     display: flex;
     flex-direction: column;
@@ -151,16 +142,13 @@ main p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 #cards.list-view img {
     max-width: 150px;
-    margin-bottom: 10px;
 }
 
-/* Estilo para botones */
+/* Botones */
 .view-toggle {
     text-align: center;
     margin-bottom: 20px;
@@ -179,9 +167,6 @@ main p {
     background-color: #ffcc00;
 }
 
-
-
-
 /* Pie de página */
 footer {
     display: flex;
@@ -193,13 +178,8 @@ footer {
     flex-wrap: wrap;
 }
 
-footer p {
+footer p, footer a {
     margin: 0 20px;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
 }
 
 footer i {
@@ -210,65 +190,41 @@ footer i:hover {
     transform: scale(1.2);
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
+/* Iconos FontAwesome */
+.fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
+    text-rendering: optimizeLegibility;
+}
 
+.fa-rotate-by {
+    transform: rotate(var(--fa-rotate-angle, 0deg));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* Una columna en móviles */
+        grid-template-columns: 1fr;
     }
+
     #cards {
         display: block;
-        padding: 10px;
-    }
-
-    #cards section {
-        margin-bottom: 20px;
-        width: 100%;
     }
 
     #cards img {
         width: 80%;
-        margin: 0 auto;
-        display: block;
     }
 
     footer p {
         display: block;
-        margin: 10px 0;
-    }
-
-    footer .fab {
-        margin: 0 15px;
-    }
-
-    footer .footer-socials {
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-    }
-
-    footer .footer-socials a {
-        color: white;
-        text-decoration: none;
     }
 }
 
-footer .footer-socials {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-/* Ocultar menú hamburguesa en pantallas grandes */
 .menu-toggle {
     display: none;
 }
 
-/* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
-        cursor: pointer;
         flex-direction: column;
         justify-content: space-between;
         width: 30px;
@@ -278,43 +234,27 @@ footer .footer-socials {
 
     .menu-toggle .bar {
         height: 3px;
-        width: 100%;
         background-color: white;
         border-radius: 5px;
-        transition: 0.3s;
     }
 
     .nav-list {
         position: absolute;
         top: 60px;
-        left: -100%; /* Oculto por defecto */
+        left: -100%;
         width: 100%;
         background-color: #333;
         flex-direction: column;
-        text-align: center;
-        transition: 0.3s ease;
+        transition: 0.3s;
     }
 
     .nav-list.active {
-        left: 0; /* Mostrar menú */
-    }
-
-    .nav-list li {
-        margin: 15px 0;
+        left: 0;
     }
 }
 
-/*Estilos para pantallas grandes */
 @media (min-width: 769px) {
     .nav-list {
         display: flex;
-        position: static;
-        flex-direction: row;
-        background: none;
-        left: 0 !important; /* Asegura que el menú esté visible */
-    }
-
-    .menu-toggle {
-        display: none;
     }
 }

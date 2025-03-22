@@ -1,118 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Welcome to the Chamber of Commerce Querétaro's official directory page. Explore local businesses, stay informed about upcoming events, and access valuable resources to support your business growth and community engagement.">
-        <meta name="author" content="Sergio Coria Maya">
-        <meta name="keywords" content="Queretaro, santiago de queretaro, mexico, Chamber of Commerce, directory, wdd231, BYU Pathway, web development, web design, web programming, business, local businesses">
-        
-        <!-- Open Graph meta tags for better social media sharing -->
-        <meta property="og:title" content="Sergio Coria Maya's Web and Computer Programming Certificate">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/chamber/images/chamber.jpg">
-        <meta property="og:url" content="https://sergiocoria92.github.io/wdd231/chamber/directory.html">
-    
-        <!-- Favicon and icon -->
-        <link rel="icon" href="images/favicon-home.ico">
-    
-        <!-- Title of the page -->
-        <title>Chamber Directory Page</title>
-    
-        <!-- Linking to CSS stylesheets -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="styles/index.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Chamber of Commerce Querétaro's official directory page. Explore local businesses, stay informed about upcoming events, and access valuable resources to support your business growth and community engagement.">
+    <meta name="author" content="Sergio Coria Maya">
+    <meta name="keywords" content="Queretaro, santiago de queretaro, mexico, Chamber of Commerce, directory, wdd231, BYU Pathway, web development, web design, web programming, business, local businesses">
 
-    </head>
-    
-    <body>
-        <header>
-            <nav>
-                <div class="menu-container">
-                    <div class="menu-toggle" id="mobile-menu">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                    <ul class="nav-list">
-                        <li><a href="../chamber/index.html">Home</a></li>
-                        <li><a href="../chamber/directory.html">Chamber</a></li>
-                        <li><a href="https://github.com/sergiocoria92">GitHub Profile</a></li>
-                        <li><a href="https://www.linkedin.com/in/sergiocoriamaya/?locale=en_US">LinkedIn</a></li>
-                   </ul>
+    <!-- Open Graph meta tags for better social media sharing -->
+    <meta property="og:title" content="Sergio Coria Maya's Web and Computer Programming Certificate">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/chamber/images/chamber.jpg">
+    <meta property="og:url" content="https://sergiocoria92.github.io/wdd231/chamber/directory.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon-home.ico">
+
+    <title>Chamber Directory Page</title>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-container">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
-            </nav>
-            
-        </header>
-        <main>
-            <div class="image-container">
-                <img src="images/queretaro.jpg" alt="Chamber of Commerce Querétaro" class="chamber-image">
+                <ul class="nav-list">
+                    <li><a href="../chamber/index.html">Home</a></li>
+                    <li><a href="../chamber/directory.html">Chamber</a></li>
+                    <li><a href="https://github.com/sergiocoria92">GitHub Profile</a></li>
+                    <li><a href="https://www.linkedin.com/in/sergiocoriamaya/?locale=en_US">LinkedIn</a></li>
+                </ul>
             </div>
-            <h1>Chamber of Querétaro - México</h1>
-            <p>Welcome to Chamber Home Page</p>
-            <p>Explore local businesses, stay informed about upcoming events, and access valuable resources to support your business growth and community engagement.</p>
-        
-            <!-- Business Cards Section -->
+        </nav>
+    </header>
 
-                <!-- The JavaScript will populate this container with gold members -->
+    <main>
+        <div class="image-container">
+            <img src="images/queretaro.jpg" alt="Chamber of Commerce Querétaro" class="chamber-image">
+        </div>
+
+        <h1>Chamber of Querétaro - México</h1>
+        <p>Welcome to the Chamber Home Page.</p>
+        <p>Explore local businesses, stay informed about upcoming events, and access valuable resources to support your business growth and community engagement.</p>
+    
+        <!-- Business Cards Section -->
+        <!-- JavaScript will populate this section with gold members -->
+        
+        <div class="grid-container">
+            <!-- Events Section -->
+            <div class="grid-item">
+                <h3>Events</h3>
+                <p>SolidWorks course – Tuesday 2:00 PM - 3:00 PM</p>
+                <p>3D Printing course – Wednesday 2:00 PM - 3:00 PM</p>
+                <p>Talk with businessman Juan Perez (La Vida Prospera) – Thursday 5:00 PM</p>
             </div>
-        
-            <div class="grid-container">
-                <!-- Events, Current Weather, Weather Forecast Section -->
-                <div class="grid-item">
-                    <h3>Events</h3>
-                    <p>SolidWorks course – Tuesday 2:00 PM - 3:00 PM </p>
-                    <p>3D Printing course – Wednesday 2:00 PM - 3:00 PM</p>
-                    <p>Talk with businessman Juan Perez (La Vida Prospera) – Thursday 5:00 PM</p>
-                </div>
-                <div class="grid-item">
-                    <h3>Current Weather</h3>
-                    <div id="current-weather">Loading current weather...</div>
-                    <a href="images/weather.png" target="_blank">
-                        <img src="images/weather.png" alt="Weather Icon" class="weather-icon">
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <h3>Weather Forecast</h3>
-                    <p id="weather-forecast">Loading forecast...</p>
-                </div>
-                
-            </div>
-            <!-- Business Cards Section -->
-             <section id="cards"></section>
-             <!-- JavaScript will populate this section with gold members -->
 
-        </main>
-        
-        
-        
-        <footer>
-            <p>Camara de comercio Querétaro, Qro. México
-                <br>Ciudad del Sol 116 C.P. 70000
-                <br>Querétaro, Qro. México
-                <br>(442) 123-4567
-            </p>
-
-            <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.twitter.com" target="_blank" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i>
+            <!-- Current Weather Section -->
+            <div class="grid-item">
+                <h3>Current Weather</h3>
+                <div id="current-weather">Loading current weather...</div>
+                <a href="images/weather.png" target="_blank">
+                    <img src="images/weather.png" alt="Weather Icon" class="weather-icon">
                 </a>
             </div>
-            
-            <p>WDD231 Class project
-                <br>© 2021 Sergio Coria Maya. All rights reserved.
-                <br><span id="last-modified"></span> <!-- Aquí se mostrará la última modificación -->
-            </p>
-        </footer>
 
-        <!-- Link to your JavaScript file -->
-        <script defer src="scripts/index.js"></script>
-    </body>
+            <!-- Weather Forecast Section -->
+            <div class="grid-item">
+                <h3>Weather Forecast</h3>
+                <p id="weather-forecast">Loading forecast...</p>
+            </div>
+        </div>
+
+        <!-- Business Cards Section -->
+        <section id="cards">
+            <h2>Gold Members</h2>
+            <!-- JavaScript will populate this section with gold members -->
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Cámara de Comercio Querétaro, Qro. México<br>
+            Ciudad del Sol 116 C.P. 70000<br>
+            Querétaro, Qro. México<br>
+            (442) 123-4567
+        </p>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <p>
+            WDD231 Class project<br>
+            © 2021 Sergio Coria Maya. All rights reserved.<br>
+            <span id="last-modified"></span>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script defer src="scripts/index.js"></script>
+</body>
 </html>
-
