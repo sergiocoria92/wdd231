@@ -1,0 +1,107 @@
+/*.rock-salt-regular {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}*//* Eliminar márgenes y padding por defecto */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Estilo general para el header */
+header {
+    background-color: black;
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: normal;
+    color: #FFFFFF; /* Color de texto blanco */
+}
+
+/* Para asegurarte de que los elementos del menú estén en fila */
+.nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* Estilos para cada ítem de la lista */
+.nav li {
+    margin: 0 50px; /* Espaciado entre los elementos */
+    cursor: pointer; /* Muestra cursor de mano para indicar que es un enlace */
+    transition: color 0.4s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Aplicar color a los enlaces directamente */
+.nav li a {
+    text-decoration: none; /* Eliminar subrayado por defecto de los enlaces */
+    color: white; /* Color blanco por defecto */
+    transition: color 0.4s ease; /* Transición suave para el cambio de color */
+}
+
+/* Cuando el mouse pasa sobre los enlaces */
+.nav li a:hover {
+    color: yellow; /* Cambia el color a amarillo cuando el mouse pasa sobre el enlace */
+}
+
+/* Evitar que el color cambie a morado al hacer clic */
+.nav li a:focus,
+.nav li a:active {
+    color: white; /* Mantener el color blanco */
+    outline: none; /* Eliminar el contorno de enfoque */
+}
+
+/* Efecto de parpadeo (inicialmente controlado por JS) */
+.nav li.blink {
+    animation: blink 2s ease-out infinite; /* Parpadeo más lento y visible */
+}
+/* El contenedor del indicador se coloca fuera de la lista de enlaces */
+#indicator {
+    position: absolute;
+    bottom: -10px; /* Ajusta para que quede justo debajo de los enlaces */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    transition: all 0.3s ease; /* Animación suave */
+}
+
+/* Imagen del indicador (la guitarra) */
+#indicator-img {
+    width: 30px; /* Ajusta el tamaño de la imagen */
+    height: 30px; /* Mantén la imagen cuadrada */
+}
+
+/* Estilo para los enlaces activos */
+.nav li a.active {
+    font-weight: bold;
+    color: yellow; /* Color para indicar que está activo */
+}
+
+.nav li {
+    margin: 0 50px;
+    cursor: pointer;
+}
+
+/* Contenedor de la lista de navegación */
+.nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+
+/* Animación para el parpadeo */
+@keyframes blink {
+    0% { color: yellow; opacity: 1; }
+    50% { color: transparent; opacity: 0; }
+    100% { color: yellow; opacity: 10; }
+}
+
+

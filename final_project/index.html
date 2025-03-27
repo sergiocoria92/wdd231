@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to the Chamber of Commerce Querétaro's official directory page. Explore local businesses, stay informed about upcoming events, and access valuable resources to support your business growth and community engagement.">
+    <meta name="description" content="Official Page of 'JUR', music and rockstar in Queretaro, Mexico.">
     <meta name="author" content="Sergio Coria Maya">
-    <meta name="keywords" content="Queretaro, santiago de queretaro, mexico, Chamber of Commerce, directory, wdd231, BYU Pathway, web development, web design, web programming, business, local businesses">
+    <meta name="keywords" content="Queretaro, Mexico, Rock, Music, JUR, Chamber of Commerce, Business, Events, Weather">
 
     <!-- Open Graph meta tags for better social media sharing -->
-    <meta property="og:title" content="Sergio Coria Maya's Web and Computer Programming Certificate">
+    <meta property="og:title" content="JUR music and rockstar">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/chamber/images/chamber.jpg">
-    <meta property="og:url" content="https://sergiocoria92.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/final_project/images/jur1.jpg">
+    <meta property="og:url" content="https://sergiocoria92.github.io/wdd231/final_project/index.html">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon-home.ico">
+    <link rel="icon" href="images/jur/favicon-32x32.png">
 
-    <title>Chamber Directory Page</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+
+    <title>JUR - Musician</title>
 
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="styles/index.css">
- 
-
+    <link rel="stylesheet" href="styles/rock.css">
 </head>
 <body>
     <header>
@@ -32,15 +36,20 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
-                <ul class="nav-list">
-                    <li><a href="../chamber/index.html">Home</a></li>
-                    <li><a href="../chamber/directory.html">Chamber</a></li>
-                    <li><a href="../chamber/join.html">Join</a></li>
-                    <li><a href="https://www.linkedin.com/in/sergiocoriamaya/?locale=en_US">LinkedIn</a></li>
+                <ul class="nav">
+                    <li><a href="../final_project/index.html" id="home-link">Home</a></li>
+                    <li><a href="../final_project/join_us.html" id="joinus-link">Join Us</a></li>
+                    <li><a href="../final_project/vip_material.html" id="vip-link">VIP</a></li>
                 </ul>
+            </div>
+            <!-- El indicador, que será la guitarra -->
+            <div id="indicator">
+                <img src="images/guitar2.png" alt="Indicator" id="indicator-img">
             </div>
         </nav>
     </header>
+    
+    
 
     <main>
         <div class="image-container">
@@ -50,12 +59,8 @@
         <h1>Chamber of Querétaro - México</h1>
         <p>Welcome to the Chamber Home Page.</p>
         <p>Explore local businesses, stay informed about upcoming events, and access valuable resources to support your business growth and community engagement.</p>
-    
-        <!-- Business Cards Section -->
-        <!-- JavaScript will populate this section with gold members -->
-        
+
         <div class="grid-container">
-            <!-- Events Section -->
             <div class="grid-item">
                 <h3>Events</h3>
                 <p>SolidWorks course – Tuesday 2:00 PM - 3:00 PM</p>
@@ -63,7 +68,6 @@
                 <p>Talk with businessman Juan Perez (La Vida Prospera) – Thursday 5:00 PM</p>
             </div>
 
-            <!-- Current Weather Section -->
             <div class="grid-item">
                 <h3>Current Weather</h3>
                 <div id="current-weather">Loading current weather...</div>
@@ -72,18 +76,12 @@
                 </a>
             </div>
 
-            <!-- Weather Forecast Section -->
             <div class="grid-item">
                 <h3>Weather Forecast</h3>
                 <p id="weather-forecast">Loading forecast...</p>
             </div>
         </div>
 
-        <!-- Business Cards Section -->
-        <section id="cards">
-            <h2>Gold Members</h2>
-            <!-- JavaScript will populate this section with gold members -->
-        </section>
     </main>
 
     <footer>
@@ -106,7 +104,6 @@
             </a>
         </div>
 
-
         <p>
             WDD231 Class project<br>
             © 2021 Sergio Coria Maya. All rights reserved.<br>
@@ -115,6 +112,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script defer src="scripts/index.js"></script>
+    <script defer src="../final_project/scripts/rock.js"></script>
 </body>
 </html>

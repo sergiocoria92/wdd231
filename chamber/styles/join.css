@@ -1,0 +1,264 @@
+/* Estilo básico para el cuerpo y encabezado */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Asegura un color de primer plano */
+    background-color: #fff; /* Asegura un color de fondo */
+}
+
+header {
+    background-color: #333;
+    color: #fff; 
+    padding: 1em;
+    text-align: center;
+    display: flex; /* Flex container */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Navegador */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+
+/* Botones */
+.view-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.view-toggle button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.view-toggle button:hover {
+    background-color: #ffcc00;
+}
+
+
+/*formulario:*/
+/* Estilos globales para el formulario */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos para el encabezado */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Contenedor del formulario */
+form {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de las etiquetas */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Asegura que los campos de texto no tengan bordes al recibir foco */
+input[type="text"]:focus,
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Ajuste especial para el campo de descripción */
+textarea {
+    width: 100%;
+    padding: 10px;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Agregar pequeño estilo al mensaje de advertencia */
+small {
+    font-size: 12px;
+    color: #888;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Alineación y estilo del botón de envío */
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Estilos para el contenedor de cada campo */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Añadir un margen inferior a los campos */
+input[type="text"], select, textarea {
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/* Pie de página */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+footer p, footer a {
+    margin: 0 20px;
+}
+
+footer i {
+    transition: transform 0.3s;
+}
+
+footer i:hover {
+    transform: scale(1.2);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+/* Responsive */
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    #cards {
+        display: block;
+    }
+
+    #cards img {
+        width: 80%;
+    }
+
+    footer p {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        margin: 10px;
+    }
+
+    .menu-toggle .bar {
+        height: 3px;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        transition: 0.3s;
+    }
+
+    .nav-list.active {
+        left: 0;
+    }
+}
+
+
