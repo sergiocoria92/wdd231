@@ -31,55 +31,123 @@
         </nav>
     </header>
 
-    <body>
+    <main>
         <h1>Formulario de Contacto</h1>
         <form action="thanks.html" method="get">
-            <!-- Título organizacional -->
-            <label for="org-title">Applicant's Organizational Title:</label>
-            <input type="text" id="org-title" name="org-title" autocomplete="organization-title" pattern="^[A-Za-z\s-]{7,}$" required>
-            <small>Title must be at least 7 characters long and can only contain letters, hyphens, and spaces.</small>
-    
+
             <!-- Nombre -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="name">First name:</label>
+            <input 
+                type="text" 
+                required
+                id="name" 
+                name="name" 
+                autocomplete="given-name" 
+                required 
+                title="Put your first name" 
+                placeholder="First Name">
+            
     
             <!-- Apellido -->
             <label for="last-name">Last Name:</label>
-            <input type="text" id="last-name" name="last-name" required>
+            <input 
+            type="text" 
+            required
+            id="last-name" 
+            name="last-name"
+            autocomplete="given-last name"
+            title="Put your last name"
+            placeholder="Last Name">
+
+            <!-- organizational title-->
+            <label for="organizational-title">Organizational title:</label>
+            <input 
+                type="text" 
+                required
+                id="organizational-title"
+                name="organizational-title" 
+                autocomplete="given-organizational-title"
+                title="Put your organizational title"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                placeholder="Organizational title">
+            
+            
     
             <!-- Email -->
-            <label for="another-field">Email address:</label>
-            <input type="text" id="another-field" name="another-field" required>
+            <label for="email">Email:</label>
+            <input 
+            type="email" 
+            required
+            name="email"
+            title = "Put your email"
+            autocomplete="given-email"
+            placeholder="example@gmail.com">
     
             <!-- Número de teléfono móvil -->
             <label for="mobile">Mobile phone number:</label>
-            <input type="text" id="mobile" name="mobile" required>
+            <input 
+            type="telephone" 
+            required 
+            name="mobile" 
+            title = "Put your mobile phone number"
+            autocomplete="given-mobile"
+            placeholder=" example - 760-123-4567">
+
     
             <!-- Nombre de la organización -->
             <label for="business">Business/Organization's name:</label>
-            <input type="text" id="business" name="business" required>
-    
-            <!-- Selección de Nivel de Membresía -->
-            <label for="membership-level">Select Membership Level:</label>
-            <select id="membership-level" name="membership-level" required>
-                <option value="np">NP Membership (Non-Profit, No Fee)</option>
-                <option value="bronze">Bronze Membership</option>
-                <option value="silver">Silver Membership</option>
-                <option value="gold">Gold Membership</option>
-            </select>
+            <input 
+            type="text" 
+            required 
+            name="business" 
+            title = "Put your business/organization's name"
+            autocomplete="given-business"
+            placeholder="Business/Organization's name">
+            
+            <fieldset>
+                <legend>Membership Level:</legend>
+                <!-- Cambia los onclick por data-attributes -->
+                <div>
+                    <input type="radio" id="np" name="membership-level" value="np">
+                    <label for="np">NP Membership (Non-Profit, No Fee)</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="bronze" name="membership-level" value="bronze">
+                    <label for="bronze">Bronze Membership</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="silver" name="membership-level" value="silver">
+                    <label for="silver">Silver Membership</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="gold" name="membership-level" value="gold">
+                    <label for="gold">Gold Membership</label>
+                </div>
+                
+            </fieldset>
+            
     
             <!-- Descripción (usamos textarea para texto más largo) -->
             <label for="description">Description:</label>
-            <textarea id="description" name="description" required></textarea>
+            <textarea 
+            title="Put a description"
+            name="description"></textarea>
     
             <!-- Campo oculto para la fecha y hora -->
-            <input type="hidden" id="timestamp" name="timestamp">
+            <input 
+            type="hidden" 
+            id="timestamp" 
+            name="timestamp">
     
             <!-- Botón de envío -->
             <input type="submit" value="Submit">
         </form>
-    </body>
-    
+
+        <!-- Cuadro de diálogo (fuera del formulario) -->
+
 
     <footer>
         <p>Camara de comercio Querétaro, Qro. México
@@ -102,11 +170,9 @@
         </p>
 
         <p>WDD231 Class project
-            <br>© 2021 Sergio Coria Maya. All rights reserved.
+            <br>© 2025 Sergio Coria Maya. All rights reserved.
             <br><span id="last-modified"></span> <!-- Aquí se mostrará la última modificación -->
         </p>
     </footer>
-    <script src="scripts/join.js"></script>
-
 </body>
 </html>

@@ -169,6 +169,32 @@ input[type="text"], select, textarea {
 
 
 
+/* Estilo para los contenedores de los radio buttons */
+/* Estilo para los contenedores de los radio buttons */
+div {
+    display: inline-block; /* Hace que los elementos se alineen horizontalmente */
+    margin-right: 15px; /* Espacio entre los radio buttons */
+    vertical-align: middle; /* Asegura que los radio buttons estén alineados correctamente */
+}
+
+/* Estilo para los labels */
+label {
+    margin-left: 5px; /* Espacio entre el radio button y el texto */
+    font-size: 16px; /* Puedes ajustar el tamaño del texto */
+    cursor: pointer; /* Cambia el cursor cuando el mouse pasa sobre el label */
+}
+
+/* Para asegurarte de que el form esté centrado en la página */
+form {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+
+
+
+
 
 /* Pie de página */
 footer {
