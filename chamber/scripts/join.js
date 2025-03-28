@@ -1,5 +1,6 @@
 // Actualiza la fecha de última modificación
 document.addEventListener("DOMContentLoaded", function() {
+    // Actualizar la fecha de última modificación
     const lastModifiedElement = document.querySelector("#last-modified");
     if (lastModifiedElement) {
         lastModifiedElement.textContent = "Last modified: " + document.lastModified;
@@ -27,16 +28,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Modal functionality
+    // Funcionalidad del modal
     const modal = document.getElementById('membershipModal');
     if (modal) {
         const modalContent = document.getElementById('modalContent');
         const closeBtn = document.querySelector('.close-modal');
         
-        // Get all radio buttons
+        // Obtener todos los botones de radio
         const membershipRadios = document.querySelectorAll('input[name="membership-level"]');
         
-        // Add click event to each radio button
+        // Agregar evento click a cada botón de radio
         membershipRadios.forEach(radio => {
             radio.addEventListener('click', function() {
                 const info = this.getAttribute('data-info');
@@ -45,16 +46,16 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
         
-        // Close modal when clicking X
+        // Cerrar el modal cuando se hace clic en X
         if (closeBtn) {
             closeBtn.addEventListener('click', function() {
                 modal.style.display = 'none';
             });
         }
         
-        // Close modal when clicking outside
+        // Cerrar el modal cuando se hace clic fuera del modal
         window.addEventListener('click', function(event) {
-            if (event.target == modal) {
+            if (event.target === modal) {
                 modal.style.display = 'none';
             }
         });
