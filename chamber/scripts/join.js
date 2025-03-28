@@ -1,21 +1,62 @@
 // Actualiza la fecha de última modificación
-const lastModifiedElement = document.querySelector("#last-modified");
-if (lastModifiedElement) {
-    lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
-}
-
-const url = "https://sergiocoria92.github.io/wdd231/chamber/data/members.json";
-
-// Manejo del menú móvil
-const mobileMenu = document.getElementById("mobile-menu");
-const navList = document.querySelector(".nav-list");
-mobileMenu.addEventListener("click", () => navList.classList.toggle("active"));
-
-
-
-// Función para obtener la fecha y hora actual y colocarla en el campo oculto
 document.addEventListener("DOMContentLoaded", function() {
-    var currentDate = new Date(); // Obtener la fecha y hora actual
-    var timestampField = document.getElementById("timestamp"); // Seleccionar el campo oculto
-    timestampField.value = currentDate.toISOString(); // Asignar la fecha y hora actual al campo (en formato ISO)
+    const lastModifiedElement = document.querySelector("#last-modified");
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = "Last modified: " + document.lastModified;
+    }
+
+    // Timestamp
+    const timestampField = document.getElementById("timestamp");
+    if (timestampField) {
+        timestampField.value = new Date().toISOString();
+    }
+
+    // Menú hamburguesa
+    const nav = document.querySelector("nav");
+    if (nav) {
+        const menuToggle = document.createElement("div");
+        menuToggle.className = "menu-toggle";
+        menuToggle.innerHTML = "☰ Menu";
+        nav.insertBefore(menuToggle, nav.firstChild);
+        
+        const navList = document.querySelector("nav ul");
+        if (navList) {
+            menuToggle.addEventListener("click", () => {
+                navList.classList.toggle("active");
+            });
+        }
+    }
+
+    // Modal functionality
+    const modal = document.getElementById('membershipModal');
+    if (modal) {
+        const modalContent = document.getElementById('modalContent');
+        const closeBtn = document.querySelector('.close-modal');
+        
+        // Get all radio buttons
+        const membershipRadios = document.querySelectorAll('input[name="membership-level"]');
+        
+        // Add click event to each radio button
+        membershipRadios.forEach(radio => {
+            radio.addEventListener('click', function() {
+                const info = this.getAttribute('data-info');
+                modalContent.innerHTML = `<h3>${this.value.toUpperCase()} Membership</h3><p>${info}</p>`;
+                modal.style.display = 'block';
+            });
+        });
+        
+        // Close modal when clicking X
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+        }
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
 });
