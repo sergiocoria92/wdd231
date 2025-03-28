@@ -71,13 +71,6 @@ nav ul li a:hover {
 
 /*formulario:*/
 /* Estilos globales para el formulario */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
 /* Estilos para el encabezado */
 h1 {
