@@ -54,7 +54,7 @@
                 required
                 id="last-name" 
                 name="last-name"
-                autocomplete="given-last name"
+                autocomplete="family-name"
                 title="Put your last name"
                 placeholder="Last Name">
 
@@ -65,42 +65,43 @@
                     required
                     id="organizational-title"
                     name="organizational-title" 
-                    autocomplete="given-organizational-title"
+                    autocomplete="organization-title"
                     title="Put your organizational title"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     placeholder="Organizational title">
-                
                 
         
                 <!-- Email -->
-                <label for="email">Email:</label>
+                <label for="user-email">Email:</label>
                 <input 
                 type="email" 
                 required
+                id="user-email"
                 name="email"
                 title="Put your email"
-                autocomplete="given-email"
+                autocomplete="email"
                 placeholder="example@gmail.com">
         
                 <!-- Número de teléfono móvil -->
-                <label for="mobile">Mobile phone number:</label>
+                <label for="user-mobile">Mobile phone number:</label>
                 <input 
                 type="tel" 
                 required 
+                id="user-mobile"
                 name="mobile" 
                 title="Put your mobile phone number"
-                autocomplete="given-mobile"
+                autocomplete="tel"
                 placeholder="example - 760-123-4567">
 
         
                 <!-- Nombre de la organización -->
-                <label for="business">Business/Organization's name:</label>
+                <label for="user-business">Business/Organization's name:</label>
                 <input 
                 type="text" 
                 required 
+                id="user-business"
                 name="business" 
                 title="Put your business/organization's name"
-                autocomplete="given-business"
+                autocomplete="organization"
                 placeholder="Business/Organization's name">
                 
                 <fieldset>
@@ -130,8 +131,9 @@
                 
         
                 <!-- Descripción (usamos textarea para texto más largo) -->
-                <label for="description">Description:</label>
+                <label for="user-description">Description:</label>
                 <textarea 
+                id="user-description"
                 title="Put a description"
                 name="description"></textarea>
         
