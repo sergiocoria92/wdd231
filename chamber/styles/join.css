@@ -58,6 +58,7 @@ nav ul li a:hover {
     position: absolute;
     left: 10px;
     top: 10px;
+
 }
 
 /* Formulario */
@@ -66,6 +67,7 @@ h1 {
     margin-top: 20px;
     color: #333;
 }
+
 
 form {
     width: 90%;
@@ -185,7 +187,8 @@ footer p {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-        padding: 0%;
+        position: relative;
+
     }
     
     nav ul {
@@ -197,7 +200,10 @@ footer p {
         width: 100%;
         background-color: #333;
         z-index: 1000;
+        padding: 0;
+        margin: 0;
     }
+
     
     nav ul.active {
         display: flex;
@@ -211,7 +217,22 @@ footer p {
     
     nav ul li a {
         padding: 15px;
+        color: white;
+
+        
     }
+
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .menu-open {
+        position: relative;
+        overflow: hidden;
+    }
+
+    
 
     form {
         width: 95%;
@@ -278,4 +299,16 @@ footer p {
 .membership-info h3 {
     color: #333;
     margin-bottom: 10px;
+}
+
+
+/* Animación de las tarjetas de membresía */
+fieldset div {
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+fieldset div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

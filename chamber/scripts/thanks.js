@@ -26,3 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.warn('Elementos de menú móvil no encontrados');
     }
+
+
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById('first-name').textContent = urlParams.get('name');
+    document.getElementById('last-name').textContent = urlParams.get('last-name');
+    document.getElementById('email').textContent = urlParams.get('email');
+    document.getElementById('mobile').textContent = urlParams.get('mobile');
+    document.getElementById('business').textContent = urlParams.get('business');
+    document.getElementById('date').textContent = urlParams.get('timestamp');
