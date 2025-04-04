@@ -160,6 +160,180 @@ h1 {
 
 
 
+/*reproductor*//* Estilo general para el header */
+header {
+    background-color: black;
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: normal;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+h2 {
+    font-size: 3em; /* Tamaño de fuente más pequeño para el título */
+}
+
+/* Estilos generales del reproductor */
+.audio-container {
+    width: 80%; /* Ocupa el 80% del ancho de la página */
+    max-width: 800px; /* Tamaño máximo del reproductor */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Sombras sutiles */
+    margin: 0 auto; /* Asegura que esté centrado horizontalmente */
+}
+
+/* Estilos para el reproductor de audio */
+audio {
+    width: 100%; /* Reproductor ocupa todo el ancho del contenedor */
+    background-color: black; /* Fondo negro para el reproductor */
+    border-radius: 10px;
+    border: none; /* Quitar borde predeterminado */
+    outline: none; /* Eliminar borde de enfoque */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Sombras brillantes alrededor del reproductor */
+}
+
+/* Estilo para los controles del reproductor */
+audio::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro para los controles */
+    border-radius: 10px;
+    padding: 5px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button {
+    color: white !important; /* Fuerza el color blanco en los controles */
+}
+
+/* Específicos para el botón de play */
+audio::-webkit-media-controls-play-button {
+    background-color: #ff4c00; /* Naranja brillante para el botón de play */
+    border-radius: 50%; /* Hace el botón de play redondo */
+    width: 30px; /* Tamaño adecuado para el botón */
+    height: 30px; /* Tamaño adecuado para el botón */
+}
+
+/* Específicos para los controles de volumen */
+audio::-webkit-media-controls-volume-slider {
+    background-color: #ff4c00; /* Naranja brillante para el control de volumen */
+}
+
+/* Estilo para los controles de tiempo */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: white !important; /* Fuerza el color blanco para los tiempos */
+}
+
+/* Controles de avance y retroceso */
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button {
+    color: white !important; /* Asegura que sean blancos */
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #ff4c00; /* Naranja brillante para el botón de mute */
+    border-radius: 50%;
+}
+
+/* Botón de pausa con fondo diferente */
+audio::-webkit-media-controls-pause-button {
+    background-color: #ff4c00; /* Naranja brillante */
+    border-radius: 50%; /* Redondear el botón */
+    width: 30px;
+    height: 30px;
+}
+
+
+
+/*redes*/
+/* Estilo para la sección social media */
+.social-media {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0px 0;
+}
+
+/* Fondo de imagen (jur6) */
+.social-media-background {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;  /* Oculta cualquier parte que sobresalga de la imagen */
+}
+
+.jur6 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: blur(3px);  /* Difumina la imagen de fondo */
+    opacity: 0.7; /* Baja la opacidad para el efecto deslavado */
+}
+
+/* Estilo para los iconos de las redes sociales */
+.social-media-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+}
+
+/* Marco de los iconos */
+.icon-frame {
+    padding: 15px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 0, 0.5);  /* Marco verde fosforescente */
+    border: 6px solid rgba(0, 255, 0, 0.8); /* Borde verde fosforescente */
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para las imágenes de los iconos */
+.icon-frame img {
+    width: 60px; /* Aumentamos el tamaño de los iconos */
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover: aumenta el tamaño de los iconos */
+.icon-frame:hover img {
+    transform: scale(1.1);
+}
+
+/* Efecto hover: aumenta el tamaño del marco */
+.icon-frame:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo para el título */
+.social-media h2 {
+    font-size: 2em;
+    color: white;
+    font-family: "Merienda", cursive;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Para darle un mejor contraste */
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Merienda", cursive;
+}
 
 @media (max-width: 768px) {
     .imagen-container2 img {
