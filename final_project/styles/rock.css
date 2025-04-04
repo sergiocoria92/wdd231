@@ -8,7 +8,7 @@ html, body {
 /* Estilo general para el header */
 header {
     background-color: black;
-    padding: 2em;
+    padding: 1em; /* Ajustar el padding para que ocupe menos espacio en móviles */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@ header {
 }
 
 .nav li {
-    margin: 0 50px;
+    margin: 0 20px; /* Reducimos el margen para que no se vea tan espaciado en móviles */
     cursor: pointer;
     transition: color 0.4s ease;
 }
@@ -76,11 +76,11 @@ header {
 h1, p {
     margin: 0;
 }
+
 h1 {
-    font-size: 6em;
+    font-size: 4em; /* Reducir tamaño del título en móviles */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
 
 /* El contenedor de la imagen y el texto sobre la imagen */
 .imagen-container {
@@ -116,10 +116,11 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap; /* Esto permite que las imágenes se acomoden en varias filas si es necesario */
 }
 
 .imagen-container2 img {
-    width: 100px; /* Tamaño pequeño para las imágenes */
+    width: 80px; /* Ajustamos el tamaño de las imágenes para pantallas pequeñas */
     height: auto;
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 1); /* Sombras sutiles */
@@ -134,6 +135,7 @@ h1 {
     background-color: black; /* Fondo negro */
     padding: 20px;
     color: white; /* Texto blanco */
+    flex-wrap: wrap; /* Permite que los elementos se reorganicen en móviles */
 }
 
 /* Estilo para las columnas de texto a los lados */
@@ -141,12 +143,14 @@ h1 {
     flex: 1; /* Esto asegura que ambos lados ocupen el mismo espacio */
     text-align: center; /* Centra el texto dentro de las columnas */
     padding: 10px;
+    margin: 10px 0; /* Margen para separar los elementos */
 }
 
 /* Estilo para la imagen en el centro */
 .center-image {
     flex: 2; /* La imagen ocupará el doble de espacio que los textos */
     text-align: center;
+    margin: 10px 0; /* Margen para separar los elementos */
 }
 
 /* Asegúrate que la imagen no sea demasiado grande y esté centrada */
@@ -158,24 +162,9 @@ h1 {
     margin: 0 auto; /* Centra la imagen dentro de su contenedor */
 }
 
-
-
-/*reproductor*//* Estilo general para el header */
-header {
-    background-color: black;
-    padding: 2em;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-family: "Rock Salt", cursive;
-    font-weight: 1000;
-    font-style: normal;
-    color: #FFFFFF;
-    z-index: 2;
-}
-
+/*reproductor*/
 h2 {
-    font-size: 3em; /* Tamaño de fuente más pequeño para el título */
+    font-size: 2.5em; /* Ajustar tamaño del título del reproductor */
 }
 
 /* Estilos generales del reproductor */
@@ -184,9 +173,8 @@ h2 {
     max-width: 800px; /* Tamaño máximo del reproductor */
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Sombras sutiles */
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(241, 241, 241, 0.8); /* Sombras sutiles */
     margin: 0 auto; /* Asegura que esté centrado horizontalmente */
 }
 
@@ -200,70 +188,13 @@ audio {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Sombras brillantes alrededor del reproductor */
 }
 
-/* Estilo para los controles del reproductor */
-audio::-webkit-media-controls-panel {
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro para los controles */
-    border-radius: 10px;
-    padding: 5px;
-}
-
-audio::-webkit-media-controls-play-button,
-audio::-webkit-media-controls-volume-slider,
-audio::-webkit-media-controls-mute-button,
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display,
-audio::-webkit-media-controls-seek-back-button,
-audio::-webkit-media-controls-seek-forward-button {
-    color: white !important; /* Fuerza el color blanco en los controles */
-}
-
-/* Específicos para el botón de play */
-audio::-webkit-media-controls-play-button {
-    background-color: #ff4c00; /* Naranja brillante para el botón de play */
-    border-radius: 50%; /* Hace el botón de play redondo */
-    width: 30px; /* Tamaño adecuado para el botón */
-    height: 30px; /* Tamaño adecuado para el botón */
-}
-
-/* Específicos para los controles de volumen */
-audio::-webkit-media-controls-volume-slider {
-    background-color: #ff4c00; /* Naranja brillante para el control de volumen */
-}
-
-/* Estilo para los controles de tiempo */
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-    color: white !important; /* Fuerza el color blanco para los tiempos */
-}
-
-/* Controles de avance y retroceso */
-audio::-webkit-media-controls-seek-back-button,
-audio::-webkit-media-controls-seek-forward-button {
-    color: white !important; /* Asegura que sean blancos */
-}
-
-audio::-webkit-media-controls-mute-button {
-    background-color: #ff4c00; /* Naranja brillante para el botón de mute */
-    border-radius: 50%;
-}
-
-/* Botón de pausa con fondo diferente */
-audio::-webkit-media-controls-pause-button {
-    background-color: #ff4c00; /* Naranja brillante */
-    border-radius: 50%; /* Redondear el botón */
-    width: 30px;
-    height: 30px;
-}
-
-
-
 /*redes*/
-/* Estilo para la sección social media */
 .social-media {
     position: relative;
     text-align: center;
     margin: 0;
     padding: 0px 0;
+    background-color: black;
 }
 
 /* Fondo de imagen (jur6) */
@@ -289,12 +220,13 @@ audio::-webkit-media-controls-pause-button {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Reducir el espacio entre los iconos */
+    flex-wrap: wrap; /* Para que los iconos se acomoden en filas si es necesario */
 }
 
 /* Marco de los iconos */
 .icon-frame {
-    padding: 15px;
+    padding: 10px; /* Reducir padding */
     border-radius: 50%;
     background-color: rgba(0, 255, 0, 0.5);  /* Marco verde fosforescente */
     border: 6px solid rgba(0, 255, 0, 0.8); /* Borde verde fosforescente */
@@ -303,8 +235,8 @@ audio::-webkit-media-controls-pause-button {
 
 /* Estilo para las imágenes de los iconos */
 .icon-frame img {
-    width: 60px; /* Aumentamos el tamaño de los iconos */
-    height: 60px;
+    width: 40px; /* Reducir tamaño de los iconos */
+    height: 40px;
     transition: transform 0.3s ease;
 }
 
@@ -320,7 +252,7 @@ audio::-webkit-media-controls-pause-button {
 
 /* Estilo para el título */
 .social-media h2 {
-    font-size: 2em;
+    font-size: 1.8em; /* Ajustamos el tamaño del título en pantallas pequeñas */
     color: white;
     font-family: "Merienda", cursive;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Para darle un mejor contraste */
@@ -335,8 +267,58 @@ footer {
     font-family: "Merienda", cursive;
 }
 
+/* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
+       /* Texto centrado sobre la imagen */
+       .texto-sobre-imagen {
+        top: 15%; /* Ajustamos la posición para pantallas pequeñas */
+        left: 50%;
+        transform: translate(-50%, -45%); /* Mejor ajuste */
+    }
+
+    h1 {
+        font-size: 2em; /* Reducir el tamaño del título */
+    }
+
+    p {
+        font-size: 1.2em; /* Reducir el tamaño del subtítulo */
+    }
+
+    /* Contenedor de influencias musicales */
+    .influencia-musical-container {
+        padding: 0px; /* Reducimos el padding en pantallas pequeñas */
+
+    }
+
+    .influencia-musical-title h2 {
+        font-size: 2em; /* Reducimos el tamaño del título */
+    }
+
+    /* Imágenes de influencias musicales */
     .imagen-container2 img {
-        width: 80px; /* Más pequeño en dispositivos móviles */
+        width: 60px; /* Reducimos aún más el tamaño de las imágenes */
     }
 }
+
+
+
+
+
+
+    header {
+        padding: 1em; /* Menos espacio en el header */
+    }
+
+    .nav {
+        display: none; /* Ocultamos el menú normal */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Mostramos el menú hamburguesa */
+    }
+
+    /* Ajustes para el reproductor */
+    .audio-container {
+        width: 90%; /* Ocupa el 90% del ancho en móviles */
+    }
+
