@@ -38,3 +38,10 @@ if (nav) {
         event.stopPropagation();
     });
 }
+
+
+// Actualiza la fecha de última modificación
+const lastModifiedElement = document.querySelector("#last-modified");
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
+}

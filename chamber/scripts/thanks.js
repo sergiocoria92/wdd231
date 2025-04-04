@@ -1,37 +1,62 @@
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM completamente cargado'); // Para verificar que el script se carga correctamente
 
-    // 1. Actualizar última modificación
-    const lastModifiedElement = document.getElementById('last-modified');
-    if (lastModifiedElement) {
-        lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
+// Menú hamburguesa
+const nav = document.querySelector("nav");
+if (nav) {
+    const menuToggle = document.createElement("div");
+    menuToggle.className = "menu-toggle";
+    menuToggle.innerHTML = "☰ Menu";
+    nav.insertBefore(menuToggle, nav.firstChild);
+    
+    const navList = document.querySelector("nav ul");
+    const body = document.body;  // Añadimos una referencia al cuerpo
+
+    if (navList) {
+        menuToggle.addEventListener("click", (event) => {
+            // Evitar que se propague el evento de clic
+            event.stopPropagation();
+            navList.classList.toggle("active");
+            if (navList.classList.contains("active")) {
+                // Cuando el menú se abre, desplazamos el contenido hacia abajo
+                body.style.overflow = 'hidden'; // Desactiva el scroll
+                document.documentElement.style.scrollBehavior = 'smooth'; // Para una transición suave
+            } else {
+                // Restauramos el scroll cuando el menú se cierra
+                body.style.overflow = ''; // Reactiva el scroll
+            }
+        });
     }
 
-
+    // Cerrar el menú si se hace clic fuera del menú
+    document.addEventListener("click", (event) => {
+        if (!nav.contains(event.target) && navList.classList.contains("active")) {
+            navList.classList.remove("active");
+            body.style.overflow = '';  // Restauramos el scroll
+        }
     });
 
-    // 6. Configurar el campo oculto para la fecha y hora
-    const timestampField = document.getElementById('timestamp');
-    if (timestampField) {
-        timestampField.value = new Date().toISOString();
-    }
-
-    // 7. Menú móvil (si existe) - Esto puede ser la fuente del error inicial
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navList = document.querySelector('.nav-list');
-    if (mobileMenu && navList) {
-        mobileMenu.addEventListener('click', () => {
-            navList.classList.toggle('active');
-        });
-    } else {
-        console.warn('Elementos de menú móvil no encontrados');
-    }
+    // Evitar que el clic en el menú se propague
+    navList.addEventListener("click", (event) => {
+        event.stopPropagation();
+    });
+}
 
 
+// Actualiza la fecha de última modificación
+const lastModifiedElement = document.querySelector("#last-modified");
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Mostrar los valores de los parámetros en la URL
     const urlParams = new URLSearchParams(window.location.search);
     document.getElementById('first-name').textContent = urlParams.get('name');
     document.getElementById('last-name').textContent = urlParams.get('last-name');
     document.getElementById('email').textContent = urlParams.get('email');
     document.getElementById('mobile').textContent = urlParams.get('mobile');
     document.getElementById('business').textContent = urlParams.get('business');
-    document.getElementById('date').textContent = urlParams.get('timestamp');
+    document.getElementById('date').textContent = urlParams.get('timestamp');})
+
+

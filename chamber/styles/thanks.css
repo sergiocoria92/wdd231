@@ -3,25 +3,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white; /* Asegura un color de fondo */
-    text-align: center;
-
+    color: #333;
+    background-color: #f4f4f4;
 }
 
 header {
     background-color: #333;
-    color: #fff; 
+    color: #fff;
     padding: 1em;
-    text-align: center;
-    display: flex; /* Flex container */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    position: relative; /* Para posicionar el menú hamburguesa */
 }
 
 /* Navegador */
 nav {
     background-color: #333;
     padding: 10px 0;
+    position: relative;
 }
 
 nav ul {
@@ -30,6 +27,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
 nav ul li {
@@ -43,48 +41,30 @@ nav ul li a {
     font-weight: bold;
     padding: 10px 15px;
     transition: color 0.3s ease;
+    display: block;
 }
 
 nav ul li a:hover {
     color: #ffcc00;
 }
 
-
-/* Botones */
-.view-toggle {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.view-toggle button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #333;
-    color: white;
-    border: none;
+/* Menú hamburguesa - solo visible en móviles */
+.menu-toggle {
+    display: none;
     cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
 }
 
-.view-toggle button:hover {
-    background-color: #ffcc00;
+main {
+    padding: 20px;
+    text-align: center;
 }
-
-
-
-
-.thanks-message {
-    font-size: 5rem; /* Tamaño de letra grande */
-    color: white; /* Color de letra blanca */
-    text-align: center; /* Centrado del texto */
-    animation: blink 1s step-start 0s infinite; /* Efecto parpadeante */
-    background-color: #90EE90; /* Fondo verde claro */
-    height: 70vh; /* Para ocupar toda la altura de la ventana */
-    display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Centrado vertical */
-    margin: 0;
-}
-
 
 
 
@@ -97,24 +77,20 @@ footer {
     color: white;
     padding: 20px;
     flex-wrap: wrap;
+    text-align: center;
 }
 
-footer p, footer a {
-    margin: 0 20px;
-}
-
-footer i {
-    transition: transform 0.3s;
-}
-
-footer i:hover {
-    transform: scale(1.2);
+footer p {
+    margin: 10px 20px;
+    flex: 1 1 100%;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex: 1 1 100%;
+    margin: 15px 0;
 }
 
 .social-icon img {
@@ -127,56 +103,71 @@ footer i:hover {
     transform: scale(1.2);
 }
 
-
-
-
-/* Responsive */
 /* Responsive */
 @media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    #cards {
-        display: block;
-    }
-
-    #cards img {
-        width: 80%;
-    }
-
-    footer p {
-        display: block;
-    }
-
     .menu-toggle {
-        display: flex;
+        display: block;
+        position: relative;
+
+    }
+    
+    nav ul {
+        display: none;
         flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        margin: 10px;
-    }
-
-    .menu-toggle .bar {
-        height: 3px;
-        background-color: white;
-        border-radius: 5px;
-    }
-
-    .nav-list {
         position: absolute;
-        top: 60px;
-        left: -100%;
+        top: 100%;
+        left: 0;
         width: 100%;
         background-color: #333;
-        flex-direction: column;
-        transition: 0.3s;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
     }
 
-    .nav-list.active {
-        left: 0;
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid #444;
+    }
+    
+    nav ul li a {
+        padding: 15px;
+        color: white;
+
+        
+    }
+
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .menu-open {
+        position: relative;
+        overflow: hidden;
+    }
+
+    
+
+    form {
+        width: 95%;
+        padding: 15px;
+    }
+
+    footer {
+        flex-direction: column;
     }
 }
 
-
+/* Estilos para la fecha de última modificación */
+#last-modified {
+    font-size: 0.9em;
+    color: #ccc;
+    display: block;
+    margin-top: 5px;
+}
