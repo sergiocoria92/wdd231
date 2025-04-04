@@ -1,12 +1,8 @@
-/*.rock-salt-regular {
-  font-family: "Rock Salt", cursive;
-  font-weight: 400;
-  font-style: normal;
-}*//* Eliminar márgenes y padding por defecto */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
 }
 
 /* Estilo general para el header */
@@ -19,7 +15,8 @@ header {
     font-family: "Rock Salt", cursive;
     font-weight: 1000;
     font-style: normal;
-    color: #FFFFFF; /* Color de texto blanco */
+    color: #FFFFFF;
+    z-index: 2;
 }
 
 /* Para asegurarte de que los elementos del menú estén en fila */
@@ -30,78 +27,142 @@ header {
     list-style-type: none;
 }
 
-/* Estilos para cada ítem de la lista */
 .nav li {
-    margin: 0 50px; /* Espaciado entre los elementos */
-    cursor: pointer; /* Muestra cursor de mano para indicar que es un enlace */
-    transition: color 0.4s ease; /* Transición suave al pasar el mouse */
+    margin: 0 50px;
+    cursor: pointer;
+    transition: color 0.4s ease;
 }
 
-/* Aplicar color a los enlaces directamente */
 .nav li a {
-    text-decoration: none; /* Eliminar subrayado por defecto de los enlaces */
-    color: white; /* Color blanco por defecto */
-    transition: color 0.4s ease; /* Transición suave para el cambio de color */
+    text-decoration: none;
+    color: white;
+    transition: color 0.4s ease;
 }
 
-/* Cuando el mouse pasa sobre los enlaces */
 .nav li a:hover {
-    color: yellow; /* Cambia el color a amarillo cuando el mouse pasa sobre el enlace */
+    color: yellow;
 }
 
 /* Evitar que el color cambie a morado al hacer clic */
 .nav li a:focus,
 .nav li a:active {
-    color: white; /* Mantener el color blanco */
-    outline: none; /* Eliminar el contorno de enfoque */
+    color: white;
+    outline: none;
 }
 
-/* Efecto de parpadeo (inicialmente controlado por JS) */
-.nav li.blink {
-    animation: blink 2s ease-out infinite; /* Parpadeo más lento y visible */
-}
-/* El contenedor del indicador se coloca fuera de la lista de enlaces */
-#indicator {
-    position: absolute;
-    bottom: -10px; /* Ajusta para que quede justo debajo de los enlaces */
+/* Configuración para la imagen de fondo */
+.jur2 {
     width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* El contenedor de la imagen y el texto sobre la imagen */
+.texto-sobre-imagen {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    color: white;
     display: flex;
-    justify-content: flex-start;
-    transition: all 0.3s ease; /* Animación suave */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Merienda", cursive;
 }
 
-/* Imagen del indicador (la guitarra) */
-#indicator-img {
-    width: 30px; /* Ajusta el tamaño de la imagen */
-    height: 30px; /* Mantén la imagen cuadrada */
-}
-
-/* Estilo para los enlaces activos */
-.nav li a.active {
-    font-weight: bold;
-    color: yellow; /* Color para indicar que está activo */
-}
-
-.nav li {
-    margin: 0 50px;
-    cursor: pointer;
-}
-
-/* Contenedor de la lista de navegación */
-.nav {
-    display: flex;
-    padding: 0;
+h1, p {
     margin: 0;
-    list-style-type: none;
+}
+h1 {
+    font-size: 6em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* El contenedor de la imagen y el texto sobre la imagen */
+.imagen-container {
+    position: relative;
+    width: 100%;
+}
+
+.jur2 {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Aquí se mantiene la transparencia sobre la parte inferior */
+.influencia-musical-container {
+    position: absolute;  /* Posición absoluta sobre la imagen */
+    top: 130%;
+    width: 100%; /* Lo hacemos del mismo tamaño que el contenedor de la imagen */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo traslúcido */
+    padding: 8px;
+    text-align: center;
+}
+
+.influencia-musical-title h2 {
+    color: white;
+    font-family: "Merienda", cursive;
+}
+
+/* Estilo para las imágenes de influencias musicales */
+.imagen-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagen-container2 img {
+    width: 100px; /* Tamaño pequeño para las imágenes */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1); /* Sombras sutiles */
+}
+
+/*2da imagen*/
+/* Estilo para el contenedor principal */
+.container {
+    display: flex; /* Usamos flexbox para disponer los elementos en fila */
+    justify-content: space-between; /* Esto distribuye los elementos con el máximo espacio entre ellos */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: black; /* Fondo negro */
+    padding: 20px;
+    color: white; /* Texto blanco */
+}
+
+/* Estilo para las columnas de texto a los lados */
+.left-text, .right-text {
+    flex: 1; /* Esto asegura que ambos lados ocupen el mismo espacio */
+    text-align: center; /* Centra el texto dentro de las columnas */
+    padding: 10px;
+}
+
+/* Estilo para la imagen en el centro */
+.center-image {
+    flex: 2; /* La imagen ocupará el doble de espacio que los textos */
+    text-align: center;
+}
+
+/* Asegúrate que la imagen no sea demasiado grande y esté centrada */
+.jur5 {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    max-width: 400px; /* Limita el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
 }
 
 
 
-/* Animación para el parpadeo */
-@keyframes blink {
-    0% { color: yellow; opacity: 1; }
-    50% { color: transparent; opacity: 0; }
-    100% { color: yellow; opacity: 10; }
+
+@media (max-width: 768px) {
+    .imagen-container2 img {
+        width: 80px; /* Más pequeño en dispositivos móviles */
+    }
 }
-
-
