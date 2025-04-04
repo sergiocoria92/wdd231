@@ -59,4 +59,16 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('business').textContent = urlParams.get('business');
     document.getElementById('date').textContent = urlParams.get('timestamp');})
 
+    document.addEventListener("DOMContentLoaded", function () {
+        // Obtener la fecha y hora actual
+        const currentDate = new Date();
+        
+        // Formatear la fecha en un formato más legible
+        const formattedDate = currentDate.toLocaleString(); // Esto devuelve la fecha y hora en el formato local (dependiendo del navegador del usuario)
+    
+        // Establecer el valor de la fecha en el campo correspondiente
+        document.getElementById('date').textContent = formattedDate;
+    });
+    
+
 
