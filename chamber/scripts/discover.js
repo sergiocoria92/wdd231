@@ -40,7 +40,7 @@ if (nav) {
 }
 
 // Function to fetch the data and create cards
-fetch('data.json')
+fetch('data/data.json')
     .then(response => response.json())
     .then(data => {
         const content = document.querySelector('.grid-container');
