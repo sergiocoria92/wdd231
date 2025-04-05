@@ -61,92 +61,7 @@ nav ul li a:hover {
 
 }
 
-/* Formulario */
-h1 {
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
-}
 
-
-form {
-    width: 90%;
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: #007BFF;
-    outline: none;
-}
-
-textarea {
-    height: 150px;
-}
-
-input[type="submit"] {
-    background-color: #28a745;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 200px;
-    display: block;
-    margin: 0 auto;
-}
-
-input[type="submit"]:hover {
-    background-color: #218838;
-}
-
-/* Radio buttons */
-fieldset {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    padding: 15px;
-}
-
-fieldset div {
-    margin: 10px 0;
-}
-
-fieldset label {
-    display: inline-block;
-    margin-left: 8px;
-    font-weight: normal;
-    cursor: pointer;
-}
 
 /* Pie de página */
 footer {
@@ -232,83 +147,9 @@ footer p {
         overflow: hidden;
     }
 
-    
-
-    form {
-        width: 95%;
-        padding: 15px;
-    }
-
+ 
     footer {
         flex-direction: column;
     }
 }
 
-/* Estilos para la fecha de última modificación */
-#last-modified {
-    font-size: 0.9em;
-    color: #ccc;
-    display: block;
-    margin-top: 5px;
-}
-
-
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1001;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    position: relative;
-}
-
-.close-modal {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    color: #aaa;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-modal:hover {
-    color: black;
-}
-
-.membership-info {
-    margin-top: 15px;
-    line-height: 1.6;
-}
-
-.membership-info h3 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-
-/* Animación de las tarjetas de membresía */
-fieldset div {
-    margin: 10px 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-fieldset div:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
