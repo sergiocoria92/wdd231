@@ -25,6 +25,9 @@ if (nav) {
         }
     });
 
+
+    
+
     navList.addEventListener("click", (event) => {
         event.stopPropagation();
     });

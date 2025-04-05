@@ -177,54 +177,54 @@ footer p {
 }
 
 
-/* Responsive - Mobile */
+/* Responsive - Mobile *//* Responsive - Mobile */
 @media (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la pantalla */
-        position: relative; /* Necesario para el posicionamiento del footer */
-    }
-
-    /* Hamburger menu adjustments */
     .menu-toggle {
         display: block;
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        background: #333;
-        padding: 10px;
-        border-radius: 4px;
-    }
+        position: relative;
 
+    }
+    
     nav ul {
         display: none;
         flex-direction: column;
-        position: fixed;
-        top: 60px;
+        position: absolute;
+        top: 100%;
         left: 0;
-        right: 0;
         width: 100%;
         background-color: #333;
         z-index: 1000;
         padding: 0;
         margin: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
     }
 
+    
     nav ul.active {
         display: flex;
-        max-height: 300px;
-        padding: 10px 0;
     }
-
+    
     nav ul li {
-        margin: 5px 0;
-        text-align: center;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid #444;
+    }
+    
+    nav ul li a {
+        padding: 15px;
+        color: white;
+
+        
     }
 
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .menu-open {
+        position: relative;
+        overflow: hidden;
+    }
     /* Card adjustments */
     .grid-container {
         grid-template-columns: 1fr;
@@ -243,6 +243,7 @@ footer p {
 
     main {
         flex: 1;
+        margin-top: 80px; /* Asegura que haya espacio suficiente debajo del header fijo */
     }
 
     footer {
@@ -252,7 +253,6 @@ footer p {
         text-align: center;
         width: 100%;
     }
-
 
     .social-icons {
         flex-direction: column;
