@@ -68,16 +68,16 @@ const welcomeMessage = document.getElementById('welcomeMessage');
 const lastVisit = localStorage.getItem('lastVisit');
 
 if (!lastVisit) {
-    welcomeMessage.innerHTML = "<p>¡Bienvenido! Si tienes alguna pregunta, háznoslo saber.</p>";
+    welcomeMessage.innerHTML = "<p>Welcome! Feel free to ask if you have any questions.</p>";
     localStorage.setItem('lastVisit', Date.now());
 } else {
     const timeDifference = Math.floor((Date.now() - lastVisit) / (1000 * 3600 * 24)); // in days
 
     if (timeDifference < 1) {
-        welcomeMessage.innerHTML = "<p>¡Vuelvo pronto! ¡Genial!</p>";
+        welcomeMessage.innerHTML = "<p>I'll be back soon! Awesome!</p>";
     } else {
         const dayText = timeDifference === 1 ? 'día' : 'días';
-        welcomeMessage.innerHTML = `<p>Tu última visita fue hace ${timeDifference} ${dayText}.</p>`;
+        welcomeMessage.innerHTML = `<p>Your last visit was ${timeDifference} ${dayText}.</p>`;
     }
 
     localStorage.setItem('lastVisit', Date.now());
@@ -86,7 +86,7 @@ if (!lastVisit) {
 // Actualiza la fecha de última modificación
 const lastModifiedElement = document.querySelector("#last-modified");
 if (lastModifiedElement) {
-    lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
+    lastModifiedElement.textContent = "Last Modified: " + document.lastModified;
 }
 
 
