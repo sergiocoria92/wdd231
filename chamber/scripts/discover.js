@@ -1,4 +1,4 @@
-// Menú hamburguesa
+// Hamburger menu
 const nav = document.querySelector("nav");
 if (nav) {
     const menuToggle = document.createElement("div");
@@ -7,33 +7,24 @@ if (nav) {
     nav.insertBefore(menuToggle, nav.firstChild);
     
     const navList = document.querySelector("nav ul");
-    const body = document.body;  // Añadimos una referencia al cuerpo
+    const body = document.body;
 
     if (navList) {
         menuToggle.addEventListener("click", (event) => {
-            // Evitar que se propague el evento de clic
             event.stopPropagation();
             navList.classList.toggle("active");
-            if (navList.classList.contains("active")) {
-                // Cuando el menú se abre, desplazamos el contenido hacia abajo
-                body.style.overflow = 'hidden'; // Desactiva el scroll
-                document.documentElement.style.scrollBehavior = 'smooth'; // Para una transición suave
-            } else {
-                // Restauramos el scroll cuando el menú se cierra
-                body.style.overflow = ''; // Reactiva el scroll
-            }
+            body.style.overflow = navList.classList.contains("active") ? 'hidden' : '';
         });
     }
 
-    // Cerrar el menú si se hace clic fuera del menú
+    // Close menu when clicking outside
     document.addEventListener("click", (event) => {
         if (!nav.contains(event.target) && navList.classList.contains("active")) {
             navList.classList.remove("active");
-            body.style.overflow = '';  // Restauramos el scroll
+            body.style.overflow = '';
         }
     });
 
-    // Evitar que el clic en el menú se propague
     navList.addEventListener("click", (event) => {
         event.stopPropagation();
     });
@@ -51,16 +42,22 @@ fetch('data/data.json')
 
             card.innerHTML = `
                 <figure>
-                    <img src="${item.url}" alt="${item.titulo}">
+                    <img src="${item.url}" alt="${item.title}" loading="lazy">
                 </figure>
-                <h2>${item.titulo}</h2>
-                <address>${item.url}</address>
-                <p>${item.descripcion}</p>
-                <button onclick="window.location.href='${item.url}'">Aprender más</button>
+                <div class="card-content">
+                    <h2>${item.title}</h2>
+                    <p>${item.description}</p>
+                    <button onclick="window.location.href='${item.url}'">Learn More</button>
+                </div>
             `;
         
             content.appendChild(card);
         });
+    })
+    .catch(error => {
+        console.error('Error loading JSON data:', error);
+        document.querySelector('.grid-container').innerHTML = 
+            '<p>Unable to load attractions. Please try again later.</p>';
     });
 
 // Function to handle the welcome message based on the last visit
@@ -74,20 +71,19 @@ if (!lastVisit) {
     const timeDifference = Math.floor((Date.now() - lastVisit) / (1000 * 3600 * 24)); // in days
 
     if (timeDifference < 1) {
-        welcomeMessage.innerHTML = "<p>I'll be back soon! Awesome!</p>";
+        welcomeMessage.innerHTML = "<p>Back so soon! Awesome!</p>";
     } else {
-        const dayText = timeDifference === 1 ? 'día' : 'días';
-        welcomeMessage.innerHTML = `<p>Your last visit was ${timeDifference} ${dayText}.</p>`;
+        const dayText = timeDifference === 1 ? 'day' : 'days';
+        welcomeMessage.innerHTML = `<p>Your last visit was ${timeDifference} ${dayText} ago.</p>`;
     }
 
     localStorage.setItem('lastVisit', Date.now());
 }
 
-// Actualiza la fecha de última modificación
-const lastModifiedElement = document.querySelector("#last-modified");
-if (lastModifiedElement) {
-    lastModifiedElement.textContent = "Last Modified: " + document.lastModified;
-}
-
-
-
+// Update last modified date
+document.addEventListener('DOMContentLoaded', () => {
+    const lastModifiedElement = document.getElementById('last-modified');
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = `Last Updated: ${new Date(document.lastModified).toLocaleDateString()}`;
+    }
+});
