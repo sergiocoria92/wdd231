@@ -39,9 +39,6 @@ if (nav) {
     });
 }
 
-
-
-
 // Function to fetch the data and create cards
 fetch('data.json')
     .then(response => response.json())
@@ -53,16 +50,15 @@ fetch('data.json')
             card.classList.add('card');
 
             card.innerHTML = `
-            <figure>
-                <img src="${item.url}" alt="${item.titulo}">
-            </figure>
-            <h2>${item.titulo}</h2>
-            <address>${item.url}</address>
-            <p>${item.descripcion}</p>
-            <button onclick="window.location.href='${item.url}'">Aprender más</button>
-        `;
+                <figure>
+                    <img src="${item.url}" alt="${item.titulo}">
+                </figure>
+                <h2>${item.titulo}</h2>
+                <address>${item.url}</address>
+                <p>${item.descripcion}</p>
+                <button onclick="window.location.href='${item.url}'">Aprender más</button>
+            `;
         
-
             content.appendChild(card);
         });
     });
@@ -87,17 +83,8 @@ if (!lastVisit) {
     localStorage.setItem('lastVisit', Date.now());
 }
 
-
-
 // Actualiza la fecha de última modificación
 const lastModifiedElement = document.querySelector("#last-modified");
 if (lastModifiedElement) {
     lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
 }
-
-
-
-const imageURL = `images/${item.titulo.toLowerCase().replace(/ /g, '-')}.jpg`;
-console.log(imageURL);  // Verifica la URL de la imagen generada
-const imgElement = document.createElement('img');
-imgElement.src = imageURL;
