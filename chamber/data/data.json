@@ -2,44 +2,37 @@
     {
       "titulo": "Casa de la corregidora",
       "descripcion": "Este edificio histórico es un símbolo de la independencia de México. La Casa de la Corregidora fue el lugar donde se gestaron importantes eventos durante la lucha por la independencia.",
-      "url": "https://elsouvenir.com/tres-lugares-trendy-en-el-centro-de-queretaro/"
+      "url": "https://sergiocoria92.github.io/wdd231/chamber/images/corregidora.jpg"
     },
     {
       "titulo": "Centro Histórico de Querétaro",
       "descripcion": "Declarado Patrimonio Mundial por la UNESCO, el centro histórico destaca por su arquitectura barroca y neoclásica, con monumentos civiles y religiosos que reflejan su rica historia.",
-      "url": "https://www.mexicodestinos.com/blog/10-lugares-conocer-en-queretaro/"
-    },
+      "url": "https://sergiocoria92.github.io/wdd231/chamber/images/centro.jpg"    },
     {
       "titulo": "Templo de Santa Rosa de Viterbo",
       "descripcion": "Esta iglesia es un ejemplo notable del barroco queretano, con columnas salomónicas y un interior ricamente decorado. Destaca su órgano y púlpito tallados en madera.",
-      "url": "https://www.mexicodestinos.com/blog/10-lugares-conocer-en-queretaro/"
-    },
+      "url": "https://sergiocoria92.github.io/wdd231/chamber/images/santa_rosa.jpg"    },
     {
       "titulo": "Plaza de Armas",
       "descripcion": "Considerada el corazón de la ciudad, esta plaza está rodeada de edificios históricos como el Palacio de Gobierno y la Casa de los Corregidores, ofreciendo un ambiente agradable para pasear.",
-      "url": "https://vsd.mx/5-lugares-para-visitar-en-el-centro-historico-de-queretaro"
-    },
+      "url": "https://sergiocoria92.github.io/wdd231/chamber/images/plaza_armas.jpg"    },
     {
       "titulo": "Acueducto de Querétaro",
       "descripcion": "Este majestuoso acueducto del siglo XVIII, con sus 74 arcos, es uno de los monumentos más importantes de la ciudad, originalmente construido para llevar agua desde un manantial a la ciudad.",
-      "url": "https://vsd.mx/5-lugares-para-visitar-en-el-centro-historico-de-queretaro"
-    },
+      "url": "https://sergiocoria92.github.io/wdd231/chamber/images/acueducto.jpg"    },
 
   {
     "titulo": "Parque Industrial Querétaro",
     "descripcion": "Ubicado al sur de la ciudad, este parque industrial es uno de los más importantes en la región, con infraestructura de primer nivel y espacios para diversas industrias, especialmente automotriz y aeronáutica.",
-    "url": "https://www.investinqueretaro.com/parques-industriales"
-  },
+    "url": "https://sergiocoria92.github.io/wdd231/chamber/images/parque_industrial_qro.webp"  },
   {
     "titulo": "Parque Industrial El Marqués",
     "descripcion": "Este parque industrial es clave para la actividad manufacturera en Querétaro, destacando en sectores como el tecnológico y de exportación, con acceso directo a la carretera federal y el aeropuerto internacional.",
-    "url": "https://www.investinqueretaro.com/parques-industriales"
-  },
+    "url": "https://sergiocoria92.github.io/wdd231/chamber/images/industrial_marques.jpg"  },
   {
     "titulo": "Querétaro 2000",
     "descripcion": "Este moderno centro de negocios y desarrollo urbano se encuentra cerca del Aeropuerto Intercontinental de Querétaro, lo que lo convierte en un punto clave para inversionistas que busquen expandir sus operaciones logísticas y comerciales.",
-    "url": "https://www.investinqueretaro.com/queretaro-2000"
-  }
+    "url": "https://sergiocoria92.github.io/wdd231/chamber/images/queretaro_2000.jpg"  }
 
 
 ]
