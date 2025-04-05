@@ -40,11 +40,6 @@ if (nav) {
 }
 
 
-// Actualiza la fecha de última modificación
-const lastModifiedElement = document.querySelector("#last-modified");
-if (lastModifiedElement) {
-    lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
-}
 
 
 // Function to fetch the data and create cards
@@ -89,4 +84,12 @@ if (!lastVisit) {
     }
 
     localStorage.setItem('lastVisit', Date.now());
+}
+
+
+
+// Actualiza la fecha de última modificación
+const lastModifiedElement = document.querySelector("#last-modified");
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
 }
