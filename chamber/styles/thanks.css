@@ -108,15 +108,14 @@ footer p {
     .menu-toggle {
         display: block;
         position: relative;
-
+        left: 10px;
+        top: 10px;
+        z-index: 1001; /* Asegura que esté por encima del menú */
     }
     
     nav ul {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
+        position: static; /* Cambiado de absolute a static */
         width: 100%;
         background-color: #333;
         z-index: 1000;
@@ -127,6 +126,7 @@ footer p {
     
     nav ul.active {
         display: flex;
+        flex-direction: column;
     }
     
     nav ul li {
@@ -138,21 +138,7 @@ footer p {
     nav ul li a {
         padding: 15px;
         color: white;
-
-        
     }
-
-
-    body.menu-open {
-        overflow: hidden;
-    }
-
-    .menu-open {
-        position: relative;
-        overflow: hidden;
-    }
-
-    
 
     form {
         width: 95%;
