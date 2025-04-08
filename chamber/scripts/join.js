@@ -7,21 +7,16 @@ if (nav) {
     nav.insertBefore(menuToggle, nav.firstChild);
     
     const navList = document.querySelector("nav ul");
-    const body = document.body;  // Añadimos una referencia al cuerpo
+    const body = document.body;
 
     if (navList) {
         menuToggle.addEventListener("click", (event) => {
-            // Evitar que se propague el evento de clic
-            event.stopPropagation();
+            event.stopPropagation(); // Prevenir la propagación del clic
+
+            // Alternar la visibilidad del menú
             navList.classList.toggle("active");
-            if (navList.classList.contains("active")) {
-                // Cuando el menú se abre, desplazamos el contenido hacia abajo
-                body.style.overflow = 'hidden'; // Desactiva el scroll
-                document.documentElement.style.scrollBehavior = 'smooth'; // Para una transición suave
-            } else {
-                // Restauramos el scroll cuando el menú se cierra
-                body.style.overflow = ''; // Reactiva el scroll
-            }
+
+
         });
     }
 
@@ -29,7 +24,8 @@ if (nav) {
     document.addEventListener("click", (event) => {
         if (!nav.contains(event.target) && navList.classList.contains("active")) {
             navList.classList.remove("active");
-            body.style.overflow = '';  // Restauramos el scroll
+            body.style.overflow = '';  // Restaurar el scroll
+            body.style.paddingRight = ''; // Eliminar el padding extra
         }
     });
 
@@ -39,9 +35,47 @@ if (nav) {
     });
 }
 
-
 // Actualiza la fecha de última modificación
 const lastModifiedElement = document.querySelector("#last-modified");
 if (lastModifiedElement) {
     lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
 }
+
+// Nota de membresía
+const membershipRadios = document.querySelectorAll('input[name="membership-level"]');
+const membershipNote = document.getElementById('membershipNote');
+const noteContent = document.getElementById('noteContent');
+const closeNote = document.querySelector('.close-note');
+
+membershipRadios.forEach(radio => {
+    radio.addEventListener('change', function() {
+        if (this.checked) {
+            noteContent.textContent = this.dataset.info;
+            membershipNote.classList.add('active');
+            
+            const radioPosition = this.getBoundingClientRect();
+            membershipNote.style.top = `${radioPosition.top + window.scrollY}px`;
+        }
+    });
+});
+
+// Cerrar nota
+closeNote.addEventListener('click', function() {
+    membershipNote.classList.remove('active');
+});
+
+// Cerrar nota al hacer clic fuera
+document.addEventListener('click', function(event) {
+    if (!membershipNote.contains(event.target)) {
+        let isRadio = false;
+        membershipRadios.forEach(radio => {
+            if (radio.contains(event.target)) {
+                isRadio = true;
+            }
+        });
+        
+        if (!isRadio) {
+            membershipNote.classList.remove('active');
+        }
+    }
+});

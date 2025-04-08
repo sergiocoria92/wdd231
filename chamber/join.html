@@ -7,9 +7,6 @@
         <meta name="keywords" content="Web and Computer Programming Certificate, CSE 110, WDD 130, CSE 111, CSE 210, WDD 131, WDD 231">
         <meta name="author" content="Sergio Coria Maya">
 
-
-
-        <!-- Open Graph Meta Tags -->
         <meta property="og:title" content="Sergio Coria Maya's Web and Computer Programming Certificate">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/chamber/images/share.png">
@@ -22,12 +19,9 @@
     </head>
     
     <body>
-        <!-- Modal Structure -->
-        <div id="membershipModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div class="membership-info" id="modalContent"></div>
-            </div>
+        <div id="membershipNote" class="membership-note">
+            <span class="close-note">&times;</span>
+            <div class="note-content" id="noteContent"></div>
         </div>
 
         <header>
@@ -36,7 +30,8 @@
                     <li><a href="../chamber/index.html">Home</a></li>
                     <li><a href="../chamber/directory.html">Chamber</a></li>
                     <li><a href="../chamber/join.html">Join</a></li>
-                    <li><a href="../chamber/discover.html">Discover</a></li>                </ul>
+                    <li><a href="../chamber/discover.html">Discover</a></li>
+                </ul>
             </nav>
         </header>
 
@@ -44,7 +39,6 @@
             <h1>Contact Format</h1>
             <form action="thanks.html" method="get">
 
-                <!-- Nombre -->
                 <label for="name">First name:</label>
                 <input 
                     type="text" 
@@ -56,7 +50,6 @@
                     placeholder="First Name">
                 
         
-                <!-- Apellido -->
                 <label for="last-name">Last Name:</label>
                 <input 
                 type="text" 
@@ -67,7 +60,6 @@
                 title="Put your last name"
                 placeholder="Last Name">
 
-                <!-- organizational title-->
                 <label for="organizational-title">Organizational title:</label>
                 <input 
                     type="text" 
@@ -76,10 +68,10 @@
                     name="organizational-title" 
                     autocomplete="organization-title"
                     title="Put your organizational title"
-                    placeholder="Organizational title">
+                    placeholder="Organizational title"
+                    pattern="[A-Za-z\s-]{7,}">
                 
         
-                <!-- Email -->
                 <label for="user-email">Email:</label>
                 <input 
                 type="email" 
@@ -90,7 +82,6 @@
                 autocomplete="email"
                 placeholder="example@gmail.com">
         
-                <!-- Número de teléfono móvil -->
                 <label for="user-mobile">Mobile phone number:</label>
                 <input 
                 type="tel" 
@@ -102,7 +93,6 @@
                 placeholder="example - 760-123-4567">
 
         
-                <!-- Nombre de la organización -->
                 <label for="user-business">Business/Organization's name:</label>
                 <input 
                 type="text" 
@@ -137,17 +127,14 @@
                 </fieldset>
                 
         
-                <!-- Descripción -->
                 <label for="user-description">Description:</label>
                 <textarea 
                 id="user-description"
                 title="Put a description"
                 name="description"></textarea>
         
-                <!-- Campo oculto para la fecha y hora -->
                 <input type="hidden" id="timestamp" name="timestamp">
         
-                <!-- Botón de envío -->
                 <input type="submit" value="Submit">
             </form>
         </main>
@@ -176,6 +163,5 @@
                 <br><span id="last-modified"></span>
             </p>
         </footer>
-
     </body>
 </html>
