@@ -1,67 +1,256 @@
-/* General styles */
-body {
-    background-color: #000000;  /* Black background */
-    color: #FFFFFF;             /* White text */
-    font-family: 'Merienda', sans-serif; /* Main font for body text */
+html, body {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    text-align: center; /* Centers all text by default */
+    width: 100%;
+    height: 100%;
 }
 
-/* Header styles */
+/* Estilo general para el header */
 header {
+    background-color: black;
+    padding: 1em; /* Ajustar el padding para que ocupe menos espacio en móviles */
     text-align: center;
-    padding: 20px;
-    background-color: #2ECC71; /* Accent green */
+    display: flex;
+    justify-content: center;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: normal;
     color: #FFFFFF;
+    z-index: 2;
 }
 
-header h1 {
-    font-family: 'Rock Salt', cursive;  /* Font for header */
-    font-size: 2.5rem;
+/* Para asegurarte de que los elementos del menú estén en fila */
+.nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.nav li {
+    margin: 0 20px; /* Reducimos el margen para que no se vea tan espaciado en móviles */
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.4s ease;
+}
+
+.nav li a:hover {
+    color: yellow;
+}
+
+/* Evitar que el color cambie a morado al hacer clic */
+.nav li a:focus,
+.nav li a:active {
+    color: white;
+    outline: none;
+}
+
+/* Configuración para la imagen de fondo */
+.jur2 {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+        top: -30px; /* Este valor sube la imagen, recortando la parte superior */
+
+}
+
+/* El contenedor de la imagen y el texto sobre la imagen */
+.texto-sobre-imagen {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Merienda", cursive;
+}
+
+h1, p {
     margin: 0;
 }
 
-/* Section styles */
-section {
-    margin: 20px;
-    padding: 20px;
-    border-bottom: 1px solid #CCCCCC;
-    text-align: justify; /* Justify text within sections */
+h1 {
+    font-size: 4em; /* Reducir tamaño del título en móviles */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* For centering images at the end of the page (wireframe images) */
-section img {
-    max-width: 100%;
+/* El contenedor de la imagen y el texto sobre la imagen */
+.imagen-container {
+    position: relative;
+    width: 100%;
+}
+
+.jur2 {
+    width: 100%;
     height: auto;
-    margin-top: 15px;
-    display: block; /* Ensures images are treated as block elements */
-    margin-left: auto;
-    margin-right: auto; /* Centers the images horizontally */
+    display: block;
+    object-fit: cover;
 }
 
-/* Wireframe image styles */
-section img {
-    margin-top: 20px;
-    max-width: 80%; /* Make sure the wireframe images are not too big */
-    height: auto;
-}
-
-/* Footer styles */
-footer {
+/* Aquí se mantiene la transparencia sobre la parte inferior */
+.influencia-musical-container {
+    position: absolute;  /* Posición absoluta sobre la imagen */
+    top: 130%;
+    width: 100%; /* Lo hacemos del mismo tamaño que el contenedor de la imagen */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo traslúcido */
+    padding: 8px;
     text-align: center;
+}
+
+.influencia-musical-title h2 {
+    color: white;
+    font-family: "Merienda", cursive;
+}
+
+/* Estilo para las imágenes de influencias musicales */
+.imagen-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Esto permite que las imágenes se acomoden en varias filas si es necesario */
+}
+
+.imagen-container2 img {
+    width: 80px; /* Ajustamos el tamaño de las imágenes para pantallas pequeñas */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1); /* Sombras sutiles */
+}
+
+/*2da imagen*/
+/* Estilo para el contenedor principal */
+.container {
+    display: flex; /* Usamos flexbox para disponer los elementos en fila */
+    justify-content: space-between; /* Esto distribuye los elementos con el máximo espacio entre ellos */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: black; /* Fondo negro */
+    padding: 20px;
+    color: white; /* Texto blanco */
+    flex-wrap: wrap; /* Permite que los elementos se reorganicen en móviles */
+}
+
+/* Estilo para las columnas de texto a los lados */
+.left-text, .right-text {
+    flex: 1; /* Esto asegura que ambos lados ocupen el mismo espacio */
+    text-align: center; /* Centra el texto dentro de las columnas */
     padding: 10px;
-    background-color: #2ECC71; /* Accent green */
-    color: #FFFFFF;
+    margin: 10px 0; /* Margen para separar los elementos */
 }
 
-/* Specific styles for links and interactive elements */
-a {
-    color: #2ECC71; /* Green links */
-    text-decoration: none;
+/* Estilo para la imagen en el centro */
+.center-image {
+    flex: 2; /* La imagen ocupará el doble de espacio que los textos */
+    text-align: center;
+    margin: 10px 0; /* Margen para separar los elementos */
 }
 
-a:hover {
-    text-decoration: underline;
+/* Asegúrate que la imagen no sea demasiado grande y esté centrada */
+.jur5 {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    max-width: 400px; /* Limita el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
 }
+
+/*reproductor*/
+h2 {
+    font-size: 2.5em; /* Ajustar tamaño del título del reproductor */
+}
+
+/* Estilos generales del reproductor */
+.audio-container {
+    width: 80%; /* Ocupa el 80% del ancho de la página */
+    max-width: 800px; /* Tamaño máximo del reproductor */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(241, 241, 241, 0.8); /* Sombras sutiles */
+    margin: 0 auto; /* Asegura que esté centrado horizontalmente */
+}
+
+
+
+
+/* Estilos para el reproductor de audio */
+audio {
+    width: 100%; /* Reproductor ocupa todo el ancho del contenedor */
+    background-color: white; /* Fondo negro para el reproductor */
+    border-radius: 10px;
+    border: none; /* Quitar borde predeterminado */
+    outline: none; /* Eliminar borde de enfoque */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Sombras brillantes alrededor del reproductor */
+}
+
+/*ultima parte*/
+
+
+
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Merienda", cursive;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+       /* Texto centrado sobre la imagen */
+       .texto-sobre-imagen {
+        top: 15%; /* Ajustamos la posición para pantallas pequeñas */
+        left: 50%;
+        transform: translate(-50%, -45%); /* Mejor ajuste */
+    }
+
+    h1 {
+        font-size: 2em; /* Reducir el tamaño del título */
+    }
+
+    p {
+        font-size: 1.2em; /* Reducir el tamaño del subtítulo */
+    }
+
+    /* Contenedor de influencias musicales */
+    .influencia-musical-container {
+        padding: 0px; /* Reducimos el padding en pantallas pequeñas */
+
+    }
+
+    .influencia-musical-title h2 {
+        font-size: 2em; /* Reducimos el tamaño del título */
+    }
+
+    /* Imágenes de influencias musicales */
+    .imagen-container2 img {
+        width: 60px; /* Reducimos aún más el tamaño de las imágenes */
+    }
+}
+
+
+
+
+
+    header {
+        padding: 1em; /* Menos espacio en el header */
+    }
+
+
+    /* Ajustes para el reproductor */
+    .audio-container {
+        width: 90%; /* Ocupa el 90% del ancho en móviles */
+    }

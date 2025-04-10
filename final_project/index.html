@@ -3,65 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Plan - JUR Music</title>
+    <meta name="description" content="This is the official profile of JUR, a musician and rockstar from Querétaro, Mexico. On this page, you can explore his music, art, and projects, with the goal of sharing his unique talent and style with the world. The site is focused on providing information about the life of the artist JUR, his content, and how to join the movement. Domain availability: jur-music.com">
+    <meta name="author" content="Sergio Coria Maya">
+    <meta name="keywords" content="Queretaro, Mexico, Rock, Music, JUR, Chamber of Commerce, Business, Events, Musician, Rockstar, Art, Projects, Profile, Official Page">
+
+    <meta property="og:title" content="JUR music and rockstar">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/final_project/images/jur1.jpg">
+    <meta property="og:url" content="https://sergiocoria92.github.io/wdd231/final_project/index.html">
+
+    <link rel="icon" href="images/jur/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Merienda&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/rock.css"> <!-- If you need an external stylesheet -->
+
+    <title>JUR - Musician</title>
+    <link rel="stylesheet" href="styles/rock.css">
+
+
 </head>
 <body>
-
-    
     <header>
-        <h1>Site Plan - JUR Music Project</h1>
+        <nav>
+                <ul class="nav">
+                    <li><a href="../final_project/index.html" id="home-link">Home</a></li>
+                    <li><a href="../final_project/join_us.html" id="joinus-link">Join Us</a></li>
+                    <li><a href="../final_project/vip_material.html" id="vip-link">VIP</a></li>
+                </ul>
+        </nav>
     </header>
 
-    <section>
-        <h2>Site Name</h2>
-        <p><strong>Name:</strong> JUR Music</p>
-        <p><strong>Justification:</strong> The name "JUR Music" reflects the personal and professional identity of JUR, an emerging musician and rockstar from Querétaro, Mexico. The simplicity and memorability of the name make it easy for fans to remember, and it directly connects to his music and artistic persona. JUR is an independent artist looking to gain recognition and build a fanbase, and this name will help establish that brand presence.</p>
-        <p><strong>Domain Availability:</strong> jur-music.com (available for purchase)</p>
-    </section>
+    <div class="imagen-container">
+        <img class="jur2" src="images/jur2.jpeg" alt="Descripción de la imagen">
+        <div class="texto-sobre-imagen">
+            <h1>JUR</h1>
+            <br>Rockstar <p>Mexican musician</p>
+        </div>
+    </div>
+    
 
-    <section>
-        <h2>Site Purpose</h2>
-        <p>The purpose of the site is to serve as an official online hub for JUR, where visitors can explore his music, learn about his influences, and stay up to date with his projects and upcoming events. The website will also provide an easy way for fans to connect with JUR, follow his journey, and engage with his music. As an emerging artist, JUR is looking to expand his reach and share his talent with the world.</p>
-    </section>
+    <div class="influencia-musical-container">
+        <div class="influencia-musical-title">
+            <h2>Musical Influences</h2>
+        </div>
+        <div class="imagen-container2">
+            <img class="angeles" src="images/angeles_azules.jpg" alt="Los angeles azules">
+            <img class="dream" src="images/dream_theater.jfif" alt="dream theater">
+            <img class="metallica" src="images/metallica.jfif" alt="metallica">
+            <img class="iron" src="images/iron_maiden.jpg" alt="iron maiden">
+        </div>
+    </div>
 
-    <section>
-        <h2>Scenarios</h2>
-        <ul>
-            <li><strong>What are JUR's musical influences?</strong></li>
-            <li><strong>How can I join the JUR movement and support his music?</strong></li>
-            <li><strong>What are the upcoming events or concerts where JUR will perform?</strong></li>
-            <li><strong>Where can I listen to JUR's music or purchase it?</strong></li>
-        </ul>
-    </section>
+    <main>
+        <div class="container">
+            <h1>About JUR</h1>
+            <div class="left-text">
+                <p>Talented musician and rockstar from Querétaro, Mexico. With a passion for music and a unique style</p>
+            </div>
+            <div class="center-image">
+                <img class="jur5" src="images/jur5.jpeg" alt="JUR5">
+            </div>
+            <div class="right-text">
+                <p>He has captivated audiences with his performances and artistic vision. This website serves as an official profile to showcase his work, projects, and the vibrant world of JUR</p>
+            </div>
+        </div>
+        <h2>🤘 Listen to a snippet of my song 🤘</h2>
 
-    <section>
-        <h2>Color Scheme</h2>
-        <p><strong>Primary Color:</strong> Black (#000000) - This will be the background color for the site to give it a sleek, modern look.</p>
-        <p><strong>Secondary Color:</strong> White (#FFFFFF) - Used for text throughout the site to provide clear readability against the dark background.</p>
-        <p><strong>Accent Color:</strong> Green (#2ECC71) - This color will be used for call-to-action buttons, links, and some icons to create a vibrant contrast and draw attention to key interactive elements.</p>
-    </section>
+        <audio controls>
+            <source src="images/guitar-jur.mp3" type="audio/mp3">
+            Your browser does not support the audio element
+        </audio>
+        
+        <div class="vip-button-container">
+            <a href="../final_project/vip_material.html" class="vip-button">🎧 Go to VIP Material</a>
+        </div>
+        <div class="social-media">
+            <h2>More? .. check that: !</h2>
+            
+            <div class="social-media-background">
+                <img class="jur6" src="images/jur6.jpeg" alt="JUR6">
+                
+                <!-- Columna izquierda (Eventos) -->
+                <div class="events-container">
+                    <h3>Events:</h3>
+                    <ul class="events-list">
+                        <li>Paris, 14 June, 8 PM</li>
+                        <li>New York, 20 June, 9 PM</li>
+                    </ul>
+                    <div class="vip-button-container">
+                        <a href="../final_project/vip_material.html" class="vip-button">🎧 Go to VIP Material</a>
+                    </div>
+                </div>
+        
+                <!-- Columna derecha (Redes sociales) -->
+                <div class="social-media-icons-container">
+                    <div class="social-media-icons">
+                        <a href="https://www.instagram.com/jur_music/" target="instagram">
+                            <div class="icon-frame"><img src="images/instagram.jpg" alt="Instagram"></div>
+                        </a>
+                        <a href="https://www.tiktok.com/@jur_music" target="tiktok">
+                            <div class="icon-frame"><img src="images/tiktok.svg" alt="TikTok"></div>
+                        </a>
+                        <a href="https://www.facebook.com/jurmusic/" target="facebook">
+                            <div class="icon-frame"><img src="images/facebook.jpg" alt="Facebook"></div>
+                        </a>
+                        <a href="https://www.youtube.com/@jurmusic888" target="youtube">
+                            <div class="icon-frame"><img src="images/youtube.jpg" alt="YouTube"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+    </main>
 
-    <section>
-        <h2>Typography</h2>
-        <p><strong>Main Font:</strong> Rock Salt (for headers) - This font gives the site a unique, artistic feel that aligns with JUR's rockstar identity.</p>
-        <p><strong>Secondary Font:</strong> Merienda (for body text) - A clean and readable font that complements the main font and is ideal for longer text content.</p>
-    </section>
-
-    <section>
-        <h2>Wireframe</h2>
-        <p>Below is a basic design of the homepage layout for both mobile and desktop views. These wireframes are simple representations and do not contain actual content, only placeholders.</p>
-        <h3>Mobile Wireframe</h3>
-        <img src="images/frame_mobile.png" alt="Mobile Wireframe">
-        <h3>Desktop Wireframe</h3>
-        <img src="images/frame.png" alt="Desktop Wireframe">
-    </section>
-
-    <footer>
-        <p>© 2025 JUR Music Project. Sergio Coria Maya All rights reserved.</p>
+    <footer>        <p>WDD231 Class project
+        <br>© 2021 Sergio Coria Maya. All rights reserved.
+        <br><span id="last-modified"></span> <!-- Aquí se mostrará la última modificación --></p>
     </footer>
-
+    <script src="scripts/rock.js"></script>
 </body>
 </html>
-
