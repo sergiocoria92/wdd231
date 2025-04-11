@@ -1,0 +1,255 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00cc66;
+}
+
+
+/*menu*/
+
+/* Estilo general para el header */
+header {
+    background-color: black;
+    padding: 1em; /* Ajustar el padding para que ocupe menos espacio en móviles */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: normal;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+/* Para asegurarte de que los elementos del menú estén en fila */
+.nav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.nav li {
+    margin: 0 20px; /* Reducimos el margen para que no se vea tan espaciado en móviles */
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.4s ease;
+}
+
+.nav li a:hover {
+    color: yellow;
+}
+
+/* Evitar que el color cambie a morado al hacer clic */
+.nav li a:focus,
+.nav li a:active {
+    color: white;
+    outline: none;
+}
+/*end menu*/
+/*body*/
+/* Estilo para el título "Join" con fondo verde rockero */
+main h1 {
+    text-align: center;
+    background-color: #00cc66; /* Verde rockero */
+    color: white;
+    font-family: "Rock Salt", cursive;
+    margin: 0;
+    padding: 15px;
+    font-size: 2.5em;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+
+/* Contenedor principal del formulario */
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    font-family: "Merienda", cursive;
+    position: relative;
+}
+
+/* Estilo tipo lista - sin puntos */
+.form-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Lista de preguntas organizadas en forma de bloque */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+/* Fieldset personalizado */
+fieldset {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    margin-top: 20px;
+    background-color: #00cc66;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #00994d;
+}
+
+/* 🎟️ Cintillo lateral */
+.ticket-banner {
+    position: fixed;
+    top: 40%;
+    right: 0;
+    background-color: #ffcc00;
+    color: #000;
+    padding: 15px 20px;
+    border-radius: 8px 0 0 8px;
+    font-weight: bold;
+    font-family: "Merienda", cursive;
+    z-index: 999;
+    animation: blink 1.5s infinite;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.ticket-banner:hover {
+    background-color: #ffe066;
+}
+
+/* Animación del cintillo */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+/*body end*/
+
+
+/*modal*/
+/* Estilos para el mensaje lateral */
+.side-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 250px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #00cc66;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.side-message p {
+    margin: 0;
+    color: #333;
+}
+
+.close-message {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #aaa;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-message:hover {
+    color: #333;
+}
+/*modal end */
+
+
+/*ultima parte*/
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Merienda", cursive;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+       /* Texto centrado sobre la imagen */
+       .texto-sobre-imagen {
+        top: 15%; /* Ajustamos la posición para pantallas pequeñas */
+        left: 50%;
+        transform: translate(-50%, -45%); /* Mejor ajuste */
+    }
+
+    h1 {
+        font-size: 2em; /* Reducir el tamaño del título */
+    }
+
+    p {
+        font-size: 1.2em; /* Reducir el tamaño del subtítulo */
+    }
+
+    /* Contenedor de influencias musicales */
+    .influencia-musical-container {
+        padding: 0px; /* Reducimos el padding en pantallas pequeñas */
+
+    }
+
+    .influencia-musical-title h2 {
+        font-size: 2em; /* Reducimos el tamaño del título */
+    }
+
+    /* Imágenes de influencias musicales */
+    .imagen-container2 img {
+        width: 60px; /* Reducimos aún más el tamaño de las imágenes */
+    }
+}
+
+
+

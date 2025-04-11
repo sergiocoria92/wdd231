@@ -5,6 +5,8 @@ html, body {
     height: 100%;
 }
 
+/*menu*/
+
 /* Estilo general para el header */
 header {
     background-color: black;
@@ -17,6 +19,7 @@ header {
     font-style: normal;
     color: #FFFFFF;
     z-index: 2;
+    margin: 0; /* <-- esto es importante */
 }
 
 /* Para asegurarte de que los elementos del menú estén en fila */
@@ -49,6 +52,9 @@ header {
     color: white;
     outline: none;
 }
+/*end menu*/
+
+
 
 /* Configuración para la imagen de fondo */
 .jur2 {
@@ -194,10 +200,160 @@ audio {
 }
 
 /*ultima parte*/
+.social-title {
+    text-align: center;
+    background: linear-gradient(180deg, #111111, #000000); /* efecto negro brillante */
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+    font-family: "Merienda", cursive;
+    font-size: 2em;
+}
 
 
 
+/* Contenedor principal con posición relativa para superponer contenido */
+.social-media-background {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 0px;
+    height: auto;
+    min-height: 300px;
+}
 
+/* Imagen de fondo borrosa */
+.social-media-background img.jur6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(6px) brightness(0.6); /* efecto de desenfoque y oscurecimiento */
+    z-index: 1;
+}
+
+/* Contenedor del contenido que va sobre la imagen */
+.social-media-background > .events-container,
+.social-media-background > .social-media-icons-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Distribución en dos columnas */
+.social-media-background {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 30px;
+}
+
+/* Estilo columna izquierda: eventos */
+.events-container {
+    flex: 1;
+    min-width: 250px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Lista de eventos */
+.events-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.events-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Botón VIP sin efecto */
+.vip-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.vip-button {
+    text-decoration: none;
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+.vip-button:hover {
+    background-color: red;
+    animation: bounce 0.6s ease infinite;
+
+}
+
+
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-10px); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+
+/* Estilo columna derecha: íconos sociales */
+.social-media-icons-container {
+    flex: 1;
+    min-width: 200px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; /* centra horizontalmente los íconos */
+    align-items: center;     /* centra verticalmente si hay espacio */
+}
+
+/* Íconos de redes sociales */
+.social-media-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* centra cada ícono horizontalmente */
+}
+
+.icon-frame {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 10px; /* Puedes cambiarlo a '50%' si lo quieres circular */
+    border: 2px solid #00ff00; /* marco verde */
+    animation: blink 1.5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* opcional para que resalten los íconos oscuros */
+}
+
+
+.icon-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+
+/*ultima parte*/
 
 
 footer {

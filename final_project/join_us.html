@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Join the Querétaro Chamber of Commerce and take your business to the next level. Complete our membership form to access exclusive benefits, business networking, and growth opportunities in Querétaro's thriving market.">
+        <meta name="keywords" content="Web and Computer Programming Certificate, CSE 110, WDD 130, CSE 111, CSE 210, WDD 131, WDD 231">
+        <meta name="author" content="Sergio Coria Maya">
+
+        <meta property="og:title" content="Sergio Coria Maya's Web and Computer Programming Certificate">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/chamber/images/share.png">
+        <meta property="og:url" content="https://sergiocoria92.github.io/wdd231/join.html">
+    
+        <title>Join to JUR web </title>
+        <link rel="stylesheet" href="styles/join_us.css">
+        <link rel="icon" href="images/faviconjoin.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Merienda&display=swap" rel="stylesheet">
+        <script defer src="scripts/join_us.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <ul class="nav">
+                    <li><a href="../final_project/index.html" id="home-link">Home</a></li>
+                    <li><a href="../final_project/join_us.html" id="joinus-link">Join Us</a></li>
+                    <li><a href="../final_project/vip_material.html" id="vip-link">VIP</a></li>
+                </ul>
+            </nav>
+        </header>
+        <a href="../final_project/vip_material.html" class="ticket-banner">
+            🎟️ Buy tickets for the next show
+        </a>
+        
+
+        <main>
+            <h1>Join</h1>
+            <h2>Recibe news, offers, pre sales and more</h2>
+            <form action="next_step.html" method="get">
+                <div class="form-container">
+
+                    <ul class="form-list">
+                        <li>
+                            <label for="name">First name:</label>
+                            <input type="text" id="name" title="Put your name" name="name" autocomplete="given-name" required placeholder="First Name">
+                        </li>
+            
+                        <li>
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="last-name" title="Put your last name" name="last-name" required autocomplete="family-name" placeholder="Last Name">
+                        </li>
+            
+                        <li>
+                            <label for="city">City:</label>
+                            <input type="text" id="city" title="Put your city" name="city" required autocomplete="city" placeholder="City" pattern="[A-Za-z\s-]{3,}">
+                        </li>
+            
+                        <li>
+                            <label for="user-email">Email:</label>
+                            <input type="email" id="user-email" title="Put your email" name="email" required autocomplete="email" placeholder="example@gmail.com">
+                        </li>
+            
+                        <li>
+                            <label for="user-mobile">Mobile phone number:</label>
+                            <input type="tel" id="user-mobile" title="Put your mobile" name="mobile" required autocomplete="tel" placeholder="760-123-4567">
+                        </li>
+            
+                        <li>
+                            <label for="age">Age:</label>
+                            <input type="text" id="age" title="Put your age" name="age" required autocomplete="age" placeholder="Your age">
+                        </li>
+            
+                        <fieldset>
+                            <legend>Receive notifications:</legend>
+                            <div>
+                                <input type="radio" id="email" name="notification" value="email" required data-info="You chose to receive notifications by email.">
+                                <label for="email">Email</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="phone" name="notification" value="phone" required data-info="You chose to receive notifications by SMS. It will be charged to your phone bill.">
+                                <label for="phone">Phone</label>
+                            </div>
+                        </fieldset>
+
+                        
+                        
+            
+                        <li>
+                            <label for="user-description">Send a message:</label>
+                            <textarea id="user-description" name="description" placeholder="Your message..."></textarea>
+                        </li>
+            
+                        <li>
+                            <input type="hidden" id="timestamp" name="timestamp">
+                            <input type="submit" value="Submit">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            
+        </main>
+
+        <footer>        <p>WDD231 Class project
+            <br>© 2021 Sergio Coria Maya. All rights reserved.
+            <br><span id="last-modified"></span> <!-- Aquí se mostrará la última modificación --></p>
+        </footer>
+        <!-- Modal para mostrar el mensaje -->
+<!-- Modal para mostrar el mensaje -->
+<!-- Mensaje lateral que aparece al seleccionar una opción -->
+        <div id="side-message" class="side-message">
+            <span class="close-message">&times;</span>
+            <p id="message-content"></p>
+        </div>
+    </body>
+</html>
