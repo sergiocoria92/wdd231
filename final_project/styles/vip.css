@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color: black;
     height: 100%;
 }
 
@@ -79,7 +80,7 @@ h2 {
     text-align: center;
     font-size: 2rem;
     margin: 2rem 0;
-    color: #1e1e1e;
+    color: white;
     font-family: 'Merienda', cursive;
     position: relative;
 }
@@ -97,7 +98,7 @@ h2::after {
 .Events {
     padding: 2rem;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: black;
 }
 
 .grid-container {
