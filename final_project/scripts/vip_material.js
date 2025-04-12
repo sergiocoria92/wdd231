@@ -83,13 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Actualiza la fecha de última modificación
-const lastModifiedElement = document.querySelector("#last-modified");
-if (lastModifiedElement) {
-    lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
-}
-
-
 
 
 // Función para inicializar el menú hamburguesa
@@ -135,3 +128,13 @@ function initHamburgerMenu() {
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', initHamburgerMenu);
+
+
+
+function updateLastModified() {
+    const lastModifiedElement = document.querySelector("#last-modified");
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = "last-modified: " + document.lastModified;
+    }
+}
+document.addEventListener("DOMContentLoaded", updateLastModified);
