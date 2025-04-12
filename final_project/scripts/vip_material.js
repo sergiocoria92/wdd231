@@ -5,25 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
             firstName: "Luis",
             lastName: "Rey",
             city: "NEW YORK",
-
         },
         {
             firstName: "Valeria",
             lastName: "Lopez",
             city: "CDMX",
-
         },
         {
             firstName: "Carlos",
             lastName: "Ramirez",
             city: "Monterrey",
-
         },
         {
             firstName: "Fernanda",
             lastName: "Martinez",
             city: "Guadalajara",
-
         }
     ];
 
@@ -43,12 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
         card.innerHTML = `
             <h3>${user.firstName} ${user.lastName}</h3>
             <p><strong>City:</strong> ${user.city}</p>
-
         `;
         cardsContainer.appendChild(card);
     });
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
     fetch("vip.json")
@@ -61,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.classList.add("event-card");
 
                 card.innerHTML = `
-                    <img src="${event.url}" alt="${event.title}">
+                    <!-- Aquí agregamos loading="lazy" para la carga diferida de las imágenes -->
+                    <img src="${event.url}" alt="${event.title}" loading="lazy">
                     <div class="event-info">
                         <h3>${event.title}</h3>
                         <p>${event.description}</p>
@@ -75,10 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error loading event data:", error);
         });
 });
-
-
-
-
 
 // Función para inicializar el menú hamburguesa
 function initHamburgerMenu() {
@@ -123,8 +114,6 @@ function initHamburgerMenu() {
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', initHamburgerMenu);
-
-
 
 import { updateLastModified } from './utils.js';
 
