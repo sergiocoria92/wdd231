@@ -116,11 +116,8 @@ function initHamburgerMenu() {
 document.addEventListener('DOMContentLoaded', initHamburgerMenu);
 
 
-// Actualiza la fecha de última modificación
-const lastModifiedElement = document.querySelector("#last-modified");
-if (lastModifiedElement) {
-    lastModifiedElement.textContent = "last-modified: " + document.lastModified;
-}
+import { updateLastModified } from './utils.js';
 
-
-
+document.addEventListener("DOMContentLoaded", () => {
+    updateLastModified();
+});

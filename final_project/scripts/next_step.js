@@ -10,12 +10,6 @@
         document.getElementById("age").textContent = params.get("age") || "";
     });
 
-// Actualiza la fecha de última modificación
-const lastModifiedElement = document.querySelector("#last-modified");
-if (lastModifiedElement) {
-    lastModifiedElement.textContent = "last-modified: " + document.lastModified;
-}
-
 
 
 
@@ -62,3 +56,11 @@ function initHamburgerMenu() {
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', initHamburgerMenu);
+
+
+
+import { updateLastModified } from './utils.js';
+
+document.addEventListener("DOMContentLoaded", () => {
+    updateLastModified();
+});

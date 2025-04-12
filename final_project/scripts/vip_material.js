@@ -1,8 +1,3 @@
-/*hamburguer*/
-
-/*end hamburguer */
-
-
 document.addEventListener("DOMContentLoaded", () => {
     // Usuarios precargados (puedes editar o agregar más)
     const predefinedUsers = [
@@ -131,10 +126,8 @@ document.addEventListener('DOMContentLoaded', initHamburgerMenu);
 
 
 
-function updateLastModified() {
-    const lastModifiedElement = document.querySelector("#last-modified");
-    if (lastModifiedElement) {
-        lastModifiedElement.textContent = "last-modified: " + document.lastModified;
-    }
-}
-document.addEventListener("DOMContentLoaded", updateLastModified);
+import { updateLastModified } from './utils.js';
+
+document.addEventListener("DOMContentLoaded", () => {
+    updateLastModified();
+});

@@ -82,9 +82,9 @@ function blinkIcons() {
     }, 500);
 }
 
-function updateLastModified() {
-    const lastModifiedElement = document.querySelector("#last-modified");
-    if (lastModifiedElement) {
-        lastModifiedElement.textContent = "last-modified: " + document.lastModified;
-    }
-}
+import { updateLastModified } from './utils.js';
+
+document.addEventListener("DOMContentLoaded", () => {
+    updateLastModified();
+});
+    
