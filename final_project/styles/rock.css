@@ -366,6 +366,91 @@ footer {
 
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
+    /* Menú Hamburguesa para móviles */
+@media (max-width: 768px) {
+    /* Mostrar botón hamburguesa */
+
+    header {
+        justify-content: flex-start;
+        padding-left: 60px; /* Espacio para el botón hamburguesa */
+        position: relative;
+        z-index: 1002; /* Mayor que el menú y overlay */
+
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+        background: none;
+        border: none;
+        padding: 10px;
+    }
+    
+    /* Ocultar menú principal inicialmente */
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.98);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 60px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        margin: 0;
+    }
+    
+    /* Mostrar menú cuando tiene la clase 'active' */
+    .nav.active {
+        left: 0;
+        display: flex;
+    }
+    
+    /* Estilos para los items del menú en móvil */
+    .nav li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    /* Mejorar el área de clic */
+    .nav li a {
+        display: block;
+        padding: 12px 0;
+        font-size: 1.2em;
+    }
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    .nav-overlay.active {
+        display: block;
+    }
+}
+
+
+
+
+
+
+    
        /* Texto centrado sobre la imagen */
        .texto-sobre-imagen {
         top: 15%; /* Ajustamos la posición para pantallas pequeñas */
@@ -396,67 +481,14 @@ footer {
     .imagen-container2 img {
         width: 40px; /* Reducimos aún más el tamaño de las imágenes */
     }
-    .menu-toggle {
-        display: block;
-        position: relative;
-        left: 10px;
-        top: 10px;
-        z-index: 1001; /* Asegura que esté por encima del menú */
-    }
-    
-    nav ul {
-        display: none;
-        position: static; /* Cambiado de absolute a static */
-        width: 100%;
-        background-color: #333;
-        z-index: 1000;
-        padding: 0;
-        margin: 0;
-    }
 
-    
-    nav ul.active {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    nav ul li {
-        margin: 0;
-        padding: 0;
-        border-top: 1px solid #444;
-    }
-    
-    nav ul li a {
-        padding: 15px;
-        color: white;
-    }
-
-    form {
-        width: 95%;
-        padding: 15px;
-    }
-    
-}
-/* Menú hamburguesa - solo visible en móviles */
-.menu-toggle {
-    display: none; /* Oculto por defecto */
-    cursor: pointer;
-    color: white;
-    font-size: 24px;
-    padding: 10px 15px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    z-index: 1001;
 }
 
 
 
 
 
-    header {
-        padding: 1em; /* Menos espacio en el header */
-    }
+
 
 
     /* Ajustes para el reproductor */
