@@ -1,115 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Discover JUR, a powerful rock artist from Querétaro, Mexico. With a raw, intense style inspired by bands like Slipknot, this site showcases his music, vision, and the bold world behind the mask. Dive into his sound, story, and movement.">
-        <meta name="keywords" content="JUR, Mexican rockstar, Querétaro musician, heavy metal Mexico, Slipknot-inspired, alternative rock, Latin rock artist, JUR music, underground rock Mexico, artist profile, rock movement, aggressive sound, masked musician">
-        <meta name="author" content="Sergio Coria Maya">
-        
-        <meta property="og:title" content="JUR music and rockstar">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/final_project/images/jur1.jpg">
-        <meta property="og:url" content="https://sergiocoria92.github.io/wdd231/final_project/index.html">
-    
-        <title>Join to JUR web </title>
-        <link rel="stylesheet" href="styles/join_us.css">
-        <link rel="icon" href="images/jur/favicon-32x32.png">
-        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Merienda&display=swap" rel="stylesheet">
-        <script defer src="scripts/join_us.js"></script>
-    </head>
-    
-    <body>
-        <header>
-            <nav>
-                <ul class="nav">
-                    <li><a href="../final_project/index.html" id="home-link">Home</a></li>
-                    <li><a href="../final_project/join_us.html" id="joinus-link">Join Us</a></li>
-                    <li><a href="../final_project/vip_material.html" id="vip-link">VIP</a></li>
-                </ul>
-            </nav>
-        </header>
-        <a href="../final_project/vip_material.html" class="ticket-banner">
-            🎟️ Buy tickets for the next show
-        </a>
-        
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover JUR, a powerful rock artist from Querétaro, Mexico. With a raw, intense style inspired by bands like Slipknot, this site showcases his music, vision, and the bold world behind the mask. Dive into his sound, story, and movement." />
+  <meta name="keywords" content="JUR, Mexican rockstar, Querétaro musician, heavy metal Mexico, Slipknot-inspired, alternative rock, Latin rock artist, JUR music, underground rock Mexico, artist profile, rock movement, aggressive sound, masked musician" />
+  <meta name="author" content="Sergio Coria Maya" />
 
-        <main>
-            <h1>Join</h1>
-            <h2>Get news, offers, pre-sales and more</h2>
-            <form action="next_step.html" method="get">
-                <div class="form-container">
-                  <ul class="form-list">
-                        <li>
-                            <label for="name">First name:</label>
-                            <input type="text" id="name" title="Put your name" name="name" autocomplete="given-name" required placeholder="First Name">
-                        </li>
-            
-                        <li>
-                            <label for="last-name">Last Name:</label>
-                            <input type="text" id="last-name" title="Put your last name" name="last-name" required autocomplete="family-name" placeholder="Last Name">
-                        </li>
-            
-                        <li>
-                            <label for="city">City:</label>
-                            <input type="text" id="city" name="city" required autocomplete="address-level2" title="Put your city" placeholder="City" pattern="[A-Za-z\s-]{3,}">
-                        </li>
-            
-                        <li>
-                            <label for="user-email">Email:</label>
-                            <input type="email" id="user-email" title="Put your email" name="email" required autocomplete="email" placeholder="example@gmail.com">
-                        </li>
-            
-                        <li>
-                            <label for="user-mobile">Mobile phone number:</label>
-                            <input type="tel" id="user-mobile" title="Put your mobile" name="mobile" required autocomplete="tel" placeholder="760-123-4567">
-                        </li>
-            
-                        <li>
-                            <label for="age">Age:</label>
-                            <input type="number" id="age" name="age" title="Put your age" required min="1" max="120" placeholder="Your age">
-                        </li>
-                    </ul>
-            
-                        <fieldset>
-                            <legend>Receive notifications:</legend>
-                            <div>
-                                <input type="radio" id="email" name="notification" value="email" required data-info="You chose to receive notifications by email.">
-                                <label for="email">Email</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="phone" name="notification" value="phone" required data-info="You chose to receive notifications by SMS. It will be charged to your phone bill.">
-                                <label for="phone">Phone</label>
-                            </div>
-                        </fieldset>
+  <meta property="og:title" content="JUR music and rockstar" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/final_project/images/jur1.jpg" />
+  <meta property="og:url" content="https://sergiocoria92.github.io/wdd231/final_project/index.html" />
 
-                                   
-                        <li>
-                            <label for="user-description">Send a message:</label>
-                            <textarea id="user-description" name="description" placeholder="Your message..."></textarea>
-                        </li>
-            
-                        <li>
-                            <input type="hidden" id="timestamp" name="timestamp">
-                            <input type="submit" value="Submit">
-                        </li>
+  <title>Join to JUR web</title>
+  <link rel="stylesheet" href="styles/join_us.css" />
+  <link rel="icon" href="images/jur/favicon-32x32.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Merienda&display=swap" rel="stylesheet" />
+  <script defer src="scripts/join_us.js"></script>
+</head>
 
-                </form>
-            </div>
+<body>
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="../final_project/index.html" id="home-link">Home</a></li>
+        <li><a href="../final_project/join_us.html" id="joinus-link">Join Us</a></li>
+        <li><a href="../final_project/vip_material.html" id="vip-link">VIP</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            
-        </main>
+  <a href="../final_project/vip_material.html" class="ticket-banner">
+    🎟️ Buy tickets for the next show
+  </a>
 
-        <footer>        <p>WDD231 Class project
-            <br>© 2021 Sergio Coria Maya. All rights reserved.
-            <br><span id="last-modified"></span> <!-- Aquí se mostrará la última modificación --></p>
-        </footer>
-        <!-- Modal para mostrar el mensaje -->
-<!-- Modal para mostrar el mensaje -->
-<!-- Mensaje lateral que aparece al seleccionar una opción -->
-        <div id="side-message" class="side-message">
-            <span class="close-message">&times;</span>
-            <p id="message-content"></p>
-        </div>
-    </body>
+  <main>
+    <h1>Join</h1>
+    <h2>Get news, offers, pre-sales and more</h2>
+    <form action="next_step.html" method="get">
+      <div class="form-container">
+        <ul class="form-list">
+          <li>
+            <label for="name">First name:</label>
+            <input type="text" id="name" name="name" required placeholder="First Name" autocomplete="given-name" title="Put your name" />
+          </li>
+          <li>
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required placeholder="Last Name" autocomplete="family-name" title="Put your last name" />
+          </li>
+          <li>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required placeholder="City" pattern="[A-Za-z\s-]{3,}" autocomplete="address-level2" title="Put your city" />
+          </li>
+          <li>
+            <label for="user-email">Email:</label>
+            <input type="email" id="user-email" name="email" required placeholder="example@gmail.com" autocomplete="email" title="Put your email" />
+          </li>
+          <li>
+            <label for="user-mobile">Mobile phone number:</label>
+            <input type="tel" id="user-mobile" name="mobile" required placeholder="760-123-4567" autocomplete="tel" title="Put your mobile" />
+          </li>
+          <li>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required placeholder="Your age" min="1" max="120" title="Put your age" />
+          </li>
+          <li>
+            <label for="user-description">Send a message:</label>
+            <textarea id="user-description" name="description" placeholder="Your message..."></textarea>
+          </li>
+
+          <!-- ✅ Fieldset insertado antes del botón submit -->
+          <li>
+            <fieldset>
+              <legend>Receive notifications:</legend>
+              <div>
+                <input type="radio" id="notification-email" name="notification" value="email" required data-info="You chose to receive notifications by email." />
+                <label for="notification-email">Email</label>
+              </div>
+              <div>
+                <input type="radio" id="notification-phone" name="notification" value="phone" required data-info="You chose to receive notifications by SMS. It will be charged to your phone bill." />
+                <label for="notification-phone">Phone</label>
+              </div>
+            </fieldset>
+          </li>
+
+          <!-- ✅ Botón de envío al final -->
+          <li>
+            <input type="hidden" id="timestamp" name="timestamp" />
+            <input type="submit" value="Submit" />
+          </li>
+        </ul>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>
+      WDD231 Class project<br />
+      © 2021 Sergio Coria Maya. All rights reserved.<br />
+      <span id="last-modified"></span>
+    </p>
+  </footer>
+
+  <!-- Modal para mostrar el mensaje -->
+  <div id="side-message" class="side-message">
+    <span class="close-message">&times;</span>
+    <p id="message-content"></p>
+  </div>
+</body>
 </html>

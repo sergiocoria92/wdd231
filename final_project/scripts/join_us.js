@@ -1,20 +1,20 @@
 // Obtener elementos del DOM
-const emailRadio = document.getElementById('email');
-const phoneRadio = document.getElementById('phone');
+const emailRadio = document.getElementById('notification-email');
+const phoneRadio = document.getElementById('notification-phone');
 const sideMessage = document.getElementById('side-message');
 const messageContent = document.getElementById('message-content');
 const closeMessageBtn = document.querySelector('.close-message');
 
 // Mostrar mensaje lateral cuando se selecciona una opción
 emailRadio.addEventListener('change', function() {
-    if(this.checked) {
+    if (this.checked) {
         messageContent.textContent = this.getAttribute('data-info');
         sideMessage.style.display = 'block';
     }
 });
 
 phoneRadio.addEventListener('change', function() {
-    if(this.checked) {
+    if (this.checked) {
         messageContent.textContent = this.getAttribute('data-info');
         sideMessage.style.display = 'block';
     }
@@ -25,9 +25,9 @@ closeMessageBtn.addEventListener('click', function() {
     sideMessage.style.display = 'none';
 });
 
-// Cerrar mensaje después de 5 segundos (opcional)
+// Cerrar mensaje automáticamente después de 5 segundos
 emailRadio.addEventListener('change', function() {
-    if(this.checked) {
+    if (this.checked) {
         setTimeout(() => {
             sideMessage.style.display = 'none';
         }, 5000);
@@ -35,12 +35,13 @@ emailRadio.addEventListener('change', function() {
 });
 
 phoneRadio.addEventListener('change', function() {
-    if(this.checked) {
+    if (this.checked) {
         setTimeout(() => {
             sideMessage.style.display = 'none';
         }, 5000);
     }
 });
+
 
 
 
