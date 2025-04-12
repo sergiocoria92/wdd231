@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="styles/join_us.css" />
   <link rel="icon" href="images/jur/favicon-32x32.png" />
   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Merienda&display=swap" rel="stylesheet" />
-  <script type="module" src="scripts/vip_material.js"></script><!-- modulo ES-->
+  
 </head>
 
 <body>
@@ -54,7 +54,7 @@
           </li>
           <li>
             <label for="user-email">Email:</label>
-            <input type="email" id="user-email" name="email" required placeholder="example@gmail.com" autocomplete="email" title="Put your email" />
+            <input type="email" id="user-email" name="user_email" required placeholder="example@gmail.com" autocomplete="email" title="Put your email" />
           </li>
           <li>
             <label for="user-mobile">Mobile phone number:</label>
@@ -69,7 +69,6 @@
             <textarea id="user-description" name="description" placeholder="Your message..."></textarea>
           </li>
 
-          <!-- ✅ Fieldset insertado antes del botón submit -->
           <li>
             <fieldset>
               <legend>Receive notifications:</legend>
@@ -84,7 +83,6 @@
             </fieldset>
           </li>
 
-          <!-- ✅ Botón de envío al final -->
           <li>
             <input type="hidden" id="timestamp" name="timestamp" />
             <input type="submit" value="Submit" />
@@ -94,18 +92,29 @@
     </form>
   </main>
 
-  <footer>
-    <p>
-      WDD231 Class project<br />
-      © 2021 Sergio Coria Maya. All rights reserved.<br />
-      <span id="last-modified"></span>
-    </p>
-  </footer>
-
   <!-- Modal para mostrar el mensaje -->
   <div id="side-message" class="side-message">
     <span class="close-message">&times;</span>
     <p id="message-content"></p>
   </div>
+
+  <!-- Modal para "Send a message" -->
+<div id="message-modal" class="custom-modal">
+  <div class="custom-modal-content">
+    <span class="custom-close">&times;</span>
+    <p>¡Envía tu mensaje ahora!</p>
+  </div>
+</div>
+
+
+  <footer>
+    <p>WDD231 Class project
+    <br>© 2021 Sergio Coria Maya. All rights reserved.
+    <br><span id="last-modified"></span></p>
+  </footer>
+
+  <script type="module" src="scripts/join_us.js"></script>
 </body>
 </html>
+
+

@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function renderPredefinedUsers() {
+    const cardsContainer = document.getElementById("cards");
+    if (!cardsContainer) {
+        // Si no estamos en la página con el contenedor, salimos
+        return;
+    }
+
     const predefinedUsers = [
         {
             firstName: "Luis",
@@ -31,15 +37,12 @@ function renderPredefinedUsers() {
         }
     ];
 
-    // Agrega usuario actual desde localStorage si existe
     const currentUser = JSON.parse(localStorage.getItem("userData"));
     if (currentUser) {
         predefinedUsers.push(currentUser);
     }
 
-    const cardsContainer = document.getElementById("cards");
-
-    //templates literals when building strings
+    // templatees literals when building string
     predefinedUsers.forEach(user => {
         const card = document.createElement("div");
         card.className = "vip-card";
@@ -50,13 +53,18 @@ function renderPredefinedUsers() {
         cardsContainer.appendChild(card);
     });
 }
-//async function loadEventData() {
-async function loadEventData() {
-    try {
-        const response = await fetch("vip.json"); // Fetch the JSON data -API
-        const data = await response.json();
 
-        const container = document.querySelector(".grid-container");
+//ASYN//
+async function loadEventData() {
+    const container = document.querySelector(".grid-container");
+    if (!container) {
+        // Si no estamos en la página que tiene .grid-container, salimos
+        return;
+    }
+
+    try {
+        const response = await fetch("vip.json"); // API URL
+        const data = await response.json();
 
         data.forEach(event => {
             const card = document.createElement("div");
@@ -110,5 +118,3 @@ function initHamburgerMenu() {
         link.addEventListener('click', toggleMenu);
     });
 }
-
-

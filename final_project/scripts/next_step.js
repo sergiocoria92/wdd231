@@ -1,14 +1,15 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const userData = JSON.parse(localStorage.getItem("userData"));
 
-    window.addEventListener("DOMContentLoaded", () => {
-        const params = new URLSearchParams(window.location.search);
-
-        document.getElementById("first-name").textContent = params.get("name") || "";
-        document.getElementById("last-name").textContent = params.get("last-name") || "";
-        document.getElementById("email").textContent = params.get("email") || "";
-        document.getElementById("mobile").textContent = params.get("mobile") || "";
-        document.getElementById("city").textContent = params.get("city") || "";
-        document.getElementById("age").textContent = params.get("age") || "";
-    });
+    if (userData) {
+        document.getElementById("name").textContent = userData.firstName || "";
+        document.getElementById("last-name").textContent = userData.lastName || "";
+        document.getElementById("user-email").textContent = userData.email || "";
+        document.getElementById("user-mobile").textContent = userData.mobile || "";
+        document.getElementById("city").textContent = userData.city || "";
+        document.getElementById("age").textContent = userData.age || "";
+    }
+});
 
 
 
