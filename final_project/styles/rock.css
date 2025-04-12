@@ -11,7 +11,7 @@ html, body {
 header {
     position: relative;
     background-color: black;
-    padding: 1em; /* Ajustar el padding para que ocupe menos espacio en móviles */
+    padding: 2.5em; /* Ajustar el padding para que ocupe menos espacio en móviles */
     text-align: center;
     display: flex;
     justify-content: center;
