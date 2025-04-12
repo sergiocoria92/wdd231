@@ -384,7 +384,7 @@ footer {
     /* Contenedor de influencias musicales */
     .influencia-musical-container {
         padding: 0px; /* Reducimos el padding en pantallas pequeñas */
-        top: 50%; /* Ajustamos la posición para que esté más cerca de la parte inferior */
+        top: 30%; /* Ajustamos la posición para que esté más cerca de la parte inferior */
 
     }
 
