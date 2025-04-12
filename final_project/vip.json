@@ -2,23 +2,91 @@
   {
     "title": "First concert",
     "description": "A few minutes before the event starts. Event in 2023, Querétaro, Qro",
-    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur1.jpeg"
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur1.jpeg",
+    "date": "2023-01-01"
   },
   {
     "title": "First vive latino",
     "description": "One of the most important events in Mexico, with many bands and people. Event in 2023, Mexico City",
-    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur2.jpeg"  },
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur2.jpeg",
+    "date": "2023-02-20"
+  },
   {
     "title": "Concert to the church",
     "description": "A concert at the church in Querétaro, with many people and a great atmosphere. Event in 2024, Querétaro, Qro",
-    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur3.jpeg"  },
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur3.jpeg",
+    "date": "2024-05-15"
+  },
   {
-    "title": "benefit concert",
+    "title": "Benefit concert",
     "description": "JUR at a benefit concert for the people of Querétaro. Event in 2024, Querétaro, Qro",
-    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur4.jpeg"  },
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur4.jpeg",
+    "date": "2024-06-10"
+  },
   {
     "title": "Magazine cover",
     "description": "A magazine cover featuring many bands and people. Event in 2025, Mexico City",
-    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur5.jpeg"  }
-    
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur5.jpeg",
+    "date": "2025-03-05"
+  },
+  {
+    "title": "Rock festival",
+    "description": "A massive rock music festival. Event in 2024, Guadalajara, Jalisco",
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur6.jpeg",
+    "date": "2024-09-12"
+  },
+  {
+    "title": "Jazz night",
+    "description": "An intimate jazz performance at a local venue. Event in 2023, Monterrey, NL",
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jaz.jpg",
+    "date": "2023-11-23"
+  },
+  {
+    "title": "Open air concert",
+    "description": "A free open-air concert in the city park. Event in 2023, Mexico City",
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur8.jpg",
+    "date": "2023-06-15"
+  },
+  {
+    "title": "Indie rock show",
+    "description": "A night of indie rock music at a popular club. Event in 2024, Querétaro, Qro",
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur9.jpeg",
+    "date": "2024-04-18"
+  },
+  {
+    "title": "Electronic music fest",
+    "description": "Jur special invted to electronic music festival featuring top DJs. Event in 2025, Mexico City",
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur10.jpeg",
+    "date": "2025-07-30"
+  },
+  {
+    "title": "Punk rock evening",
+    "description": "A punk rock evening with local bands. Event in 2024, Monterrey, NL",
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur11.jpeg",
+    "date": "2024-10-12"
+  },
+  {
+    "title": "Classical music concert",
+    "description": "A night of classical music at the city opera house. Event in 2024, Guadalajara, Jalisco",
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur12.jpeg",
+    "date": "2024-11-02"
+  },
+  {
+    "title": "Reggae festival",
+    "description": "A reggae music festival with international bands. Event in 2025, Tulum, Quintana Roo",
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur13.jpeg",
+    "date": "2025-05-15"
+  },
+  {
+    "title": "Metal concert",
+    "description": "A concert for metal music fans. Event in 2024, Mexico City",
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur14.jpeg",
+    "date": "2024-08-05"
+  },
+  {
+    "title": "Summer music fest",
+    "description": "A summer festival with various music genres. Event in 2024, Acapulco, Guerrero",
+    "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur15.jpeg",
+    "date": "2024-07-10"
+  }
 ]

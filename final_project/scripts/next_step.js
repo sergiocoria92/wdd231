@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', initHamburgerMenu);
 
 
 
-import { updateLastModified } from './utils.js';
+import { updateLastModified } from './utils.js'; // import function from utils.js
 
 document.addEventListener("DOMContentLoaded", () => {
     updateLastModified();

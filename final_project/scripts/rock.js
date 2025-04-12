@@ -1,63 +1,51 @@
-// JavaScript para hacer parpadear los marcos de los iconos
+// blink icons
 function blinkIcons() {
     const iconFrames = document.querySelectorAll('.icon-frame');
     
     setInterval(() => {
-        iconFrames.forEach(frame => {
-            // Alternamos el color del borde entre el verde fosforescente y transparente
+        iconFrames.forEach(frame => { //aray of elements to chance the frame color
             frame.style.borderColor = frame.style.borderColor === 'rgba(0, 255, 0, 0.8)' ? 'rgba(0, 255, 0, 0.2)' : 'rgba(0, 255, 0, 0.8)';
         });
-    }, 500); // Parpadeo cada 1 segundo (1000ms)
+    }, 500); 
 }
-
-// Ejecutar la función al cargar la página
 window.onload = blinkIcons;
 
-// Actualiza la fecha de última modificación
-const lastModifiedElement = document.querySelector("#last-modified");
-if (lastModifiedElement) {
-    lastModifiedElement.textContent = "last-modified: " + document.lastModified;
-}
-
-
-
 /*hamburger*/
-// Crear elementos dinámicos para el menú móvil
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Crear botón hamburguesa si no existe
     if (!document.querySelector('.menu-toggle')) {
-        const menuToggle = document.createElement('button');
+        const menuToggle = document.createElement('button'); // create DOM element
         menuToggle.className = 'menu-toggle';
         menuToggle.innerHTML = '☰';
         document.querySelector('header').prepend(menuToggle);
     }
     
-    // Crear overlay si no existe
+    // overlay 
     if (!document.querySelector('.nav-overlay')) {
         const overlay = document.createElement('div');
         overlay.className = 'nav-overlay';
         document.body.appendChild(overlay);
     }
     
-    // Elementos del menú
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav');
-    const overlay = document.querySelector('.nav-overlay');
+    // Elements
+    const menuToggle = document.querySelector('.menu-toggle'); //DOM elements
+    const navMenu = document.querySelector('.nav'); //DOM elements
+    const overlay = document.querySelector('.nav-overlay'); //DOM elements
     
-    // Alternar menú al hacer clic
+    //click
     menuToggle.addEventListener('click', function(e) {
         e.stopPropagation();
-        navMenu.classList.toggle('active');
+        navMenu.classList.toggle('active'); //DOM to manipulate classes 
         overlay.classList.toggle('active');
     });
     
-    // Cerrar menú al hacer clic en overlay
+    // Overlay click 
     overlay.addEventListener('click', function() {
         navMenu.classList.remove('active');
         overlay.classList.remove('active');
     });
     
-    // Cerrar menú al hacer clic en un enlace
+    // close menu
     document.querySelectorAll('.nav a').forEach(link => {
         link.addEventListener('click', function() {
             navMenu.classList.remove('active');
@@ -66,13 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 /*end hamburger */
     
-    // Resto de tu código JavaScript...
+
     blinkIcons();
     updateLastModified();
 });
 
 function blinkIcons() {
-    const iconFrames = document.querySelectorAll('.icon-frame');
+    const iconFrames = document.querySelectorAll('.icon-frame'); //DOM elements
     setInterval(() => {
         iconFrames.forEach(frame => {
             frame.style.borderColor = frame.style.borderColor === 'rgba(0, 255, 0, 0.8)' 
