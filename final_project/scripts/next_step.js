@@ -2,15 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const userData = JSON.parse(localStorage.getItem("userData"));
 
     if (userData) {
-        document.getElementById("name").textContent = userData.firstName || "";
+        document.getElementById("first-name").textContent = userData.firstName || "";
         document.getElementById("last-name").textContent = userData.lastName || "";
-        document.getElementById("user-email").textContent = userData.email || "";
-        document.getElementById("user-mobile").textContent = userData.mobile || "";
+        document.getElementById("email").textContent = userData.email || "";
+        document.getElementById("mobile").textContent = userData.mobile || "";
         document.getElementById("city").textContent = userData.city || "";
         document.getElementById("age").textContent = userData.age || "";
-    }
-});
-
+    }  
+    else {
+        console.warn("No se encontraron datos en localStorage");
+      }
+    });
 
 
 
@@ -65,3 +67,19 @@ import { updateLastModified } from './utils.js'; // import function from utils.j
 document.addEventListener("DOMContentLoaded", () => {
     updateLastModified();
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const data = JSON.parse(localStorage.getItem("jurFormData"));
+  
+    if (data) {
+      document.getElementById("first-name").textContent = data.name || '';
+      document.getElementById("last-name").textContent = data["last-name"] || '';
+      document.getElementById("email").textContent = data.user_email || '';
+      document.getElementById("mobile").textContent = data.mobile || '';
+      document.getElementById("city").textContent = data.city || '';
+      document.getElementById("age").textContent = data.age || '';
+    }
+  });
+  

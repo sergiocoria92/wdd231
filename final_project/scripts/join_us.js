@@ -41,31 +41,27 @@ if (phoneRadio && sideMessage && messageContent && closeMessageBtn) {
 
 
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const form = document.querySelector("form");
-    
-        form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Evita que el formulario se envíe
-    
-            const userData = {
-                firstName: document.getElementById("name").value,
-                lastName: document.getElementById("last-name").value,
-                email: document.getElementById("user-email").value,
-                mobile: document.getElementById("user-mobile").value,
-                city: document.getElementById("city").value,
-                age: document.getElementById("age").value,
-                notification: document.querySelector("input[name='notification']:checked")?.value || "",
-                message: document.getElementById("user-description").value,
-                timestamp: new Date().toISOString()
-            };
-    
-            localStorage.setItem("userData", JSON.stringify(userData));
-            window.location.href = "next_step.html";
-            
-            alert("Datos guardados correctamente"); // Opcional: confirmación
-            form.reset(); // Opcional: limpia el formulario
-        });
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("form");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Detiene el submit normal
+  
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+  
+      // Guardamos en localStorage
+      localStorage.setItem("jurFormData", JSON.stringify(data));
+  
+      // Redireccionamos a la siguiente página
+      window.location.href = "next_step.html";
     });
+  });
+  
+
 
 
 

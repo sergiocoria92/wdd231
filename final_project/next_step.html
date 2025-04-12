@@ -34,7 +34,7 @@
         <main class="thankyou-container">
             <h1 class="thankyou-title">Thank You for Joining the Chamber!</h1>
             <p class="welcome-msg">Welcome.</p>
-            <p><strong>First Name:</strong> <span id="first-name"></span></p>
+            <p><strong>first-name:</strong> <span id="first-name"></span></p>
             <p><strong>Last Name:</strong> <span id="last-name"></span></p>
             <p><strong>Email:</strong> <span id="email"></span></p>
             <p><strong>Mobile Phone:</strong> <span id="mobile"></span></p>
@@ -57,9 +57,21 @@
     
         <!-- 👇 AQUÍ VA EL SCRIPT -->
         <script type="module" src="scripts/vip_material.js"></script>
+        <script type="module">
+            const params = new URLSearchParams(window.location.search);
+          
+            document.getElementById("first-name").textContent = params.get("first-name") || "—";
+            document.getElementById("last-name").textContent = params.get("last-name") || "—";
+            document.getElementById("email").textContent = params.get("email") || "—";
+            document.getElementById("mobile").textContent = params.get("mobile") || "—";
+            document.getElementById("city").textContent = params.get("city") || "—";
+            document.getElementById("age").textContent = params.get("age") || "—";
+          </script>
+          
     </body>
     </html>
     
+<script type="module" src="scripts/next_step.js"></script>
 
     </body>
-</html>
+</html> 
