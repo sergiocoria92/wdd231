@@ -366,8 +366,8 @@ footer {
 
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Menú Hamburguesa para móviles */
-@media (max-width: 768px) {
+
+
     /* Mostrar botón hamburguesa */
 
     header {
@@ -443,11 +443,6 @@ footer {
     .nav-overlay.active {
         display: block;
     }
-}
-
-
-
-
 
 
     
@@ -495,3 +490,105 @@ footer {
     .audio-container {
         width: 90%; /* Ocupa el 90% del ancho en móviles */
     }
+/* Menú Hamburguesa SOLO para móviles */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+}
+
+.nav-overlay {
+    display: none; /* Oculto por defecto */
+}
+
+@media (max-width: 768px) {
+    /* Header ajustado para móviles */
+    header {
+        justify-content: flex-start;
+        padding-left: 60px;
+        position: relative;
+    }
+    
+    /* Mostrar botón hamburguesa SOLO en móviles */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        left: 15px;
+        top: 20px;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        z-index: 1003;
+        background: none;
+        border: none;
+        padding: 10px;
+    }
+    
+    /* Menú normal - oculto en móviles */
+    .nav {
+        display: none;
+    }
+    
+    /* Menú móvil activo */
+    .nav.active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.98);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+        z-index: 1001;
+        margin: 0;
+    }
+    
+    /* Items del menú móvil */
+    .nav.active li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    .nav.active li a {
+        display: block;
+        padding: 15px 20px;
+        font-size: 1.2em;
+    }
+    
+    /* Overlay para móviles */
+    .nav-overlay.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+    }
+}
+
+/* Estilos para pantallas grandes (se mantiene tu menú original) */
+@media (min-width: 769px) {
+    .nav {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    
+    .nav li {
+        margin: 0 20px;
+    }
+    
+    .menu-toggle {
+        display: none !important; /* Fuerza a ocultar en desktop */
+    }
+    
+    .nav-overlay {
+        display: none !important; /* Fuerza a ocultar en desktop */
+    }
+}
