@@ -9,6 +9,7 @@ html, body {
 
 /* Estilo general para el header */
 header {
+    position: relative;
     background-color: black;
     padding: 1em; /* Ajustar el padding para que ocupe menos espacio en móviles */
     text-align: center;
@@ -383,15 +384,16 @@ footer {
         position: fixed;
         top: 15px;
         left: 15px;
+        z-index: 1003;
         font-size: 28px;
         color: white;
-        cursor: pointer;
-        z-index: 1003;
         background: none;
         border: none;
         padding: 10px;
-        display: block;
-    }
+        cursor: pointer;
+        display: block;   
+     }
+    
     
     
     
