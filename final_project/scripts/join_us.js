@@ -37,10 +37,6 @@ if (phoneRadio && sideMessage && messageContent && closeMessageBtn) {
 }
 
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
   
@@ -61,11 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-
-
-
-
-
 // hamburger menu
 function initHamburgerMenu() {
     if (!document.querySelector('.menu-toggle')) {
