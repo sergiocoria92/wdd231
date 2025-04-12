@@ -22,3 +22,39 @@ if (lastModifiedElement) {
 
 
 /*hamburger*/
+// Menú hamburguesa
+const nav = document.querySelector("nav");
+if (nav) {
+    const menuToggle = document.createElement("div");
+    menuToggle.className = "menu-toggle";
+    menuToggle.innerHTML = "☰ Menu";
+    nav.insertBefore(menuToggle, nav.firstChild);
+    
+    const navList = document.querySelector("nav ul");
+    const body = document.body;
+
+    if (navList) {
+        menuToggle.addEventListener("click", (event) => {
+            event.stopPropagation(); // Prevenir la propagación del clic
+
+            // Alternar la visibilidad del menú
+            navList.classList.toggle("active");
+
+
+        });
+    }
+
+    // Cerrar el menú si se hace clic fuera del menú
+    document.addEventListener("click", (event) => {
+        if (!nav.contains(event.target) && navList.classList.contains("active")) {
+            navList.classList.remove("active");
+            body.style.overflow = '';  // Restaurar el scroll
+            body.style.paddingRight = ''; // Eliminar el padding extra
+        }
+    });
+
+    // Evitar que el clic en el menú se propague
+    navList.addEventListener("click", (event) => {
+        event.stopPropagation();
+    });
+}
