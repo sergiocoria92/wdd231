@@ -12,7 +12,7 @@ html, body {
 /* Estilo general para el header */
 header {
     background-color: black;
-    padding: 1em; /* Ajustar el padding para que ocupe menos espacio en móviles */
+    padding: 2.5em; /* Ajustar el padding para que ocupe menos espacio en móviles */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -492,6 +492,27 @@ footer {
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 1000;
     }
+    .right-column h2 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    /* Tarjetas de miembros VIP más pequeñas */
+    .vip-card {
+        width: 150px;
+        height: 80px;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Contenedor de tarjetas ajustado y centrado */
+    .cards-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 1rem;
+        gap: 10px;
+    }
+
 }
 
 
