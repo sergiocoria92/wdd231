@@ -389,12 +389,12 @@ footer {
     }
 
     .influencia-musical-title h2 {
-        font-size: 1em; /* Reducimos el tamaño del título */
+        font-size: .5em; /* Reducimos el tamaño del título */
     }
 
     /* Imágenes de influencias musicales */
     .imagen-container2 img {
-        width: 40px; /* Reducimos aún más el tamaño de las imágenes */
+        width: 20px; /* Reducimos aún más el tamaño de las imágenes */
     }
     .menu-toggle {
         display: block;
