@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay.classList.remove('active');
         });
     });
+/*end hamburger */
     
     // Resto de tu código JavaScript...
     blinkIcons();
