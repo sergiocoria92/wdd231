@@ -1,24 +1,24 @@
 [
   {
     "title": "First concert",
-    "description": "a few minutes to start the event. Event in 2023, Querétaro.Qro",
+    "description": "A few minutes before the event starts. Event in 2023, Querétaro, Qro",
     "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur1.jpeg"
   },
   {
     "title": "First vive latino",
-    "description": "One the most important event in México, with a lot of bands and people. Event in 2023, México City",
+    "description": "One of the most important events in Mexico, with many bands and people. Event in 2023, Mexico City",
     "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur2.jpeg"  },
   {
     "title": "Concert to the church",
-    "description": "A concert in the church of Querétaro, with a lot of people and a great atmosphere. Event in 2024, Querétaro.Qro",
+    "description": "A concert at the church in Querétaro, with many people and a great atmosphere. Event in 2024, Querétaro, Qro",
     "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur3.jpeg"  },
   {
     "title": "benefit concert",
-    "description": "JUR in a benefit concert for the people of Querétaro. Event in 2024, Querétaro.Qro",
+    "description": "JUR at a benefit concert for the people of Querétaro. Event in 2024, Querétaro, Qro",
     "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur4.jpeg"  },
   {
     "title": "Magazine cover",
-    "description": "A magazine cover with a lot of bands and people. Event in 2025, México City",
+    "description": "A magazine cover featuring many bands and people. Event in 2025, Mexico City",
     "url": "https://sergiocoria92.github.io/wdd231/final_project/images/jur5.jpeg"  }
     
 ]

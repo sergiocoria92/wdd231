@@ -13,6 +13,6 @@
 // Actualiza la fecha de última modificación
 const lastModifiedElement = document.querySelector("#last-modified");
 if (lastModifiedElement) {
-    lastModifiedElement.textContent = "Última modificación: " + document.lastModified;
+    lastModifiedElement.textContent = "last-modified: " + document.lastModified;
 }
 

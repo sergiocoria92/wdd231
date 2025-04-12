@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Join the Querétaro Chamber of Commerce and take your business to the next level. Complete our membership form to access exclusive benefits, business networking, and growth opportunities in Querétaro's thriving market.">
-        <meta name="keywords" content="Web and Computer Programming Certificate, CSE 110, WDD 130, CSE 111, CSE 210, WDD 131, WDD 231">
+        <meta name="description" content="Access exclusive VIP material, concert tickets, and join the JUR Club! Explore never-before-seen photos and be part of the movement. Get closer to JUR with special offers and early access to events.">
+        <meta name="keywords" content="JUR VIP material, concert tickets, JUR Club, exclusive photos, join JUR movement, JUR fan club, backstage content, early access tickets, JUR merchandise, music events, never-before-seen photos">
         <meta name="author" content="Sergio Coria Maya">
 
-        <meta property="og:title" content="Sergio Coria Maya's Web and Computer Programming Certificate">
+        <meta property="og:title" content="JUR music and rockstar">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/chamber/images/share.png">
-        <meta property="og:url" content="https://sergiocoria92.github.io/wdd231/join.html">
+        <meta property="og:image" content="https://sergiocoria92.github.io/wdd231/final_project/images/jur1.jpg">
+        <meta property="og:url" content="https://sergiocoria92.github.io/wdd231/final_project/index.html">
+    
     
         <title>Join to JUR web </title>
         <link rel="stylesheet" href="styles/vip.css">
@@ -31,8 +32,31 @@
         </header>
 
         <main>
-            <h2>🎉 New members</h2>
-            <div id="cards" class="cards-container"></div>
+            <!-- Contenedor de las dos columnas -->
+            <div class="main-columns">
+                <!-- Columna izquierda -->
+                <div class="left-column">
+                    <div class="events-container">
+                        <h3>Future events:</h3>
+                        <ul class="events-list">
+                            <li>StadeFrance, Paris, 14 June, 8 PM</li>
+                            <li>Madison Square Garden, New York, 20 June, 9 PM</li>
+                            <li>Pinal de Amoles, Querétaro, Méx, 25 June, 10 PM</li>
+                        </ul>
+                        <div class="vip-button-container">
+                            <a href="https://www.ticketmaster.com/" class="vip-button">Buy tickets</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Columna derecha -->
+                <div class="right-column">
+                    <h2>🎉 New members</h2>
+                    <div id="cards" class="cards-container"></div>
+                </div>
+            </div>
+        
+            <!-- Sección separada: Memory photos -->
             <div class="photos-container">
                 <section class="Events">
                     <h2>Memory photos</h2>
@@ -40,7 +64,9 @@
                         <!-- Aquí se cargarán las tarjetas dinámicamente con JavaScript -->
                     </div>
                 </section>
+            </div>
         </main>
+        
         
         <footer>        <p>WDD231 Class project
             <br>© 2021 Sergio Coria Maya. All rights reserved.
