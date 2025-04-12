@@ -39,8 +39,7 @@
             <h2>Get news, offers, pre-sales and more</h2>
             <form action="next_step.html" method="get">
                 <div class="form-container">
-
-                    <ul class="form-list">
+                  <ul class="form-list">
                         <li>
                             <label for="name">First name:</label>
                             <input type="text" id="name" title="Put your name" name="name" autocomplete="given-name" required placeholder="First Name">
@@ -53,7 +52,7 @@
             
                         <li>
                             <label for="city">City:</label>
-                            <input type="text" id="city" title="Put your city" name="city" required autocomplete="city" placeholder="City" pattern="[A-Za-z\s-]{3,}">
+                            <input type="text" id="city" name="city" required autocomplete="address-level2" title="Put your city" placeholder="City" pattern="[A-Za-z\s-]{3,}">
                         </li>
             
                         <li>
@@ -68,8 +67,9 @@
             
                         <li>
                             <label for="age">Age:</label>
-                            <input type="text" id="age" title="Put your age" name="age" required autocomplete="age" placeholder="Your age">
+                            <input type="number" id="age" name="age" title="Put your age" required min="1" max="120" placeholder="Your age">
                         </li>
+                    </ul>
             
                         <fieldset>
                             <legend>Receive notifications:</legend>
@@ -83,9 +83,7 @@
                             </div>
                         </fieldset>
 
-                        
-                        
-            
+                                   
                         <li>
                             <label for="user-description">Send a message:</label>
                             <textarea id="user-description" name="description" placeholder="Your message..."></textarea>
@@ -95,9 +93,10 @@
                             <input type="hidden" id="timestamp" name="timestamp">
                             <input type="submit" value="Submit">
                         </li>
-                    </ul>
+
                 </form>
             </div>
+
             
         </main>
 
